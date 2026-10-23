@@ -38,7 +38,7 @@ function HeroVisual() {
         <div className="relative flex h-full w-full items-center justify-center rounded-md border border-dark-border bg-navy">
           <div className="absolute inset-2 rounded border border-dark-border" />
           <span className="font-heading text-lg font-bold tracking-tight text-white sm:text-2xl">
-            MH
+            MHTechFusion
           </span>
         </div>
       </div>

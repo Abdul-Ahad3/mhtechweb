@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 border-t border-dark-border pt-6 text-sm text-dark-muted">
-          © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+          © 2026 {SITE.name}. All rights reserved.
         </div>
       </Container>
     </footer>
