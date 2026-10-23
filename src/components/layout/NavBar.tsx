@@ -1,0 +1,50 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Button from "@/components/ui/Button";
+import Container from "@/components/ui/Container";
+import MobileMenu from "@/components/layout/MobileMenu";
+import { CONTACT_LINK, NAV_LINKS, SITE } from "@/lib/constants";
+
+export default function Navbar() {
+  const pathname = usePathname();
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  return (
+    <header className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur">
+      <Container className="flex h-(--header-height) items-center justify-between">
+        <Link
+          href="/"
+          className="font-heading text-xl font-bold tracking-tight text-navy"
+        >
+          {SITE.name}
+        </Link>
+
+        <nav aria-label="Main" className="hidden items-center gap-10 lg:flex">
+          <ul className="flex items-center gap-8">
+            {NAV_LINKS.map(({ label, href }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  aria-current={isActive(href) ? "page" : undefined}
+                  className={`text-[15px] font-medium hover:text-steel ${
+                    isActive(href) ? "text-steel" : "text-navy"
+                  }`}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <Button href={CONTACT_LINK.href} className="!h-11">
+            {CONTACT_LINK.label}
+          </Button>
+        </nav>
+
+        <MobileMenu />
+      </Container>
+    </header>
+  );
+}
