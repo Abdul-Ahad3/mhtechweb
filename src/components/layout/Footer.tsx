@@ -13,7 +13,7 @@ export default function Footer() {
           </div>
 
           <nav aria-label="Footer">
-            <h2 className="!text-sm font-semibold uppercase tracking-[0.12em] !text-dark-muted">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-dark-muted">
               Navigation
             </h2>
             <ul className="mt-4 space-y-3">
@@ -28,7 +28,7 @@ export default function Footer() {
           </nav>
 
           <div>
-            <h2 className="!text-sm font-semibold uppercase tracking-[0.12em] !text-dark-muted">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-dark-muted">
               Get in touch
             </h2>
             <p className="mt-4 text-dark-muted">

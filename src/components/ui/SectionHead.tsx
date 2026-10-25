@@ -26,7 +26,7 @@ export default function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <Heading className={inverted ? "!text-white" : ""}>{title}</Heading>
+      <Heading className={inverted ? "text-white" : ""}>{title}</Heading>
       {description && (
         <p
           className={`mt-5 text-lg ${inverted ? "text-dark-muted" : "text-muted"}`}

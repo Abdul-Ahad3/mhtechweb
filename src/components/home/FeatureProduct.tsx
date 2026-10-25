@@ -63,7 +63,7 @@ function ProductImage({ src, alt }: { src?: string; alt: string }) {
 
 export default function FeaturedProducts() {
   return (
-    <section id="products" className="section-y border-y bg-white">
+    <section id="products" className="section-y border-y bg-hero">
       <Container>
         <SectionHeading
           eyebrow="Featured Products"
@@ -86,7 +86,7 @@ export default function FeaturedProducts() {
                   variant="text"
                   className="mt-6 self-start"
                 >
-                  {product.cta} →
+                  {product.cta} <span aria-hidden="true">→</span>
                 </Button>
               </div>
             </li>

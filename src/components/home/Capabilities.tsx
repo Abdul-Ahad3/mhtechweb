@@ -1,4 +1,3 @@
-import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHead";
 import Tag from "@/components/ui/Tag";
@@ -51,7 +50,7 @@ export default function Capabilities() {
               </span>
               <h3 className="mt-6">{title}</h3>
               <p className="mt-3 text-muted">{description}</p>
-              <ul className="mt-6 flex flex-wrap gap-2 pt-2">
+              <ul className="mt-auto flex flex-wrap gap-2 pt-6">
                 {tags.map((tag) => (
                   <li key={tag}>
                     <Tag>{tag}</Tag>
@@ -61,12 +60,6 @@ export default function Capabilities() {
             </li>
           ))}
         </ul>
-
-        <div className="mt-12">
-          <Button href="/contact" variant="text">
-            Discuss Your Project →
-          </Button>
-        </div>
       </Container>
     </section>
   );

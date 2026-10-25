@@ -43,10 +43,10 @@ function HeroVisual() {
         </div>
       </div>
 
-      <Tag className="absolute left-4 top-4 border bg-white">PCB &amp; Hardware</Tag>
-      <Tag className="absolute right-4 top-4 border bg-white">Firmware</Tag>
-      <Tag className="absolute bottom-4 left-4 border bg-white">IoT &amp; Connectivity</Tag>
-      <Tag className="absolute bottom-4 right-4 border bg-white">AI &amp; Software</Tag>
+      <Tag className="absolute left-4 top-4 border bg-white!">PCB &amp; Hardware</Tag>
+      <Tag className="absolute right-4 top-4 border bg-white!">Firmware</Tag>
+      <Tag className="absolute bottom-4 left-4 border bg-white!">IoT &amp; Connectivity</Tag>
+      <Tag className="absolute bottom-4 right-4 border bg-white!">AI &amp; Software</Tag>
     </div>
   );
 }

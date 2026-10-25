@@ -1,4 +1,3 @@
-import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHead";
 import Tag from "@/components/ui/Tag";
@@ -30,11 +29,6 @@ const PROJECTS: Project[] = [
     description: "Project summary coming soon.",
     category: "Software",
   },
-  {
-    title: "Game Development Project",
-    description: "Project summary coming soon.",
-    category: "Software",
-  },
 ];
 
 export default function SelectedWork() {
@@ -51,7 +45,7 @@ export default function SelectedWork() {
           {PROJECTS.map(({ title, description, category }) => (
             <li
               key={title}
-              className="flex flex-col rounded-lg border border-t-2 border-t-steel bg-white p-8 transition-colors hover:border-steel"
+              className="flex flex-col rounded-lg border bg-white p-8 transition-colors hover:border-steel"
             >
               <Tag className="self-start">{category}</Tag>
               <h3 className="mt-6">{title}</h3>
@@ -59,10 +53,6 @@ export default function SelectedWork() {
             </li>
           ))}
         </ul>
-
-        <div className="mt-12">
-          <Button href="/contact">Discuss Your Project</Button>
-        </div>
       </Container>
     </section>
   );

@@ -38,7 +38,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <Button href={CONTACT_LINK.href} className="!h-11">
+          <Button href={CONTACT_LINK.href} className="h-11!">
             {CONTACT_LINK.label}
           </Button>
         </nav>

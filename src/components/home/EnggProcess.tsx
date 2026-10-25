@@ -26,7 +26,7 @@ const STEPS = [
 
 export default function EngineeringProcess() {
   return (
-    <section id="process" className="section-y border-y bg-white">
+    <section id="process" className="section-y border-t bg-white">
       <Container>
         <SectionHeading
           eyebrow="Engineering Process"
@@ -34,7 +34,7 @@ export default function EngineeringProcess() {
           description="Five stages that keep hardware, firmware, and software moving together."
         />
 
-        <ol className="mt-14 grid gap-10 md:grid-cols-5 md:gap-6">
+        <ol className="mt-12 grid gap-10 md:grid-cols-5 md:gap-6">
           {STEPS.map(({ title, description }, i) => (
             <li key={title} className="relative pl-14 md:pl-0">
               <span
