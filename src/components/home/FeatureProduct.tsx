@@ -7,6 +7,7 @@ type Product = {
   name: string;
   description: string;
   image?: string;
+  imageAlt?: string;
   href: string;
   cta: string;
 };
@@ -47,7 +48,7 @@ function ProductImage({ src, alt }: { src?: string; alt: string }) {
           alt={alt}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          className="object-cover transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
         />
       ) : (
         <>
@@ -77,7 +78,10 @@ export default function FeaturedProducts() {
               key={`${product.name}-${i}`}
               className="group flex flex-col overflow-hidden rounded-lg border bg-white transition-colors hover:border-steel"
             >
-              <ProductImage src={product.image} alt={product.name} />
+              <ProductImage
+                src={product.image}
+                alt={product.imageAlt ?? product.name}
+              />
               <div className="flex flex-1 flex-col p-8">
                 <h3>{product.name}</h3>
                 <p className="mt-3 flex-1 text-muted">{product.description}</p>

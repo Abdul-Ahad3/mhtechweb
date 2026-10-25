@@ -32,7 +32,7 @@ export default function MobileMenu() {
         type="button"
         aria-expanded={open}
         aria-controls="mobile-menu"
-        aria-label={open ? "Close menu" : "Open menu"}
+        aria-label="Main menu"
         onClick={() => setOpen((v) => !v)}
         className="inline-flex h-11 w-11 items-center justify-center rounded-md border text-navy hover:bg-tag"
       >
@@ -57,7 +57,7 @@ export default function MobileMenu() {
       {open && (
         <div
           id="mobile-menu"
-          className="absolute inset-x-0 top-full border-b bg-background shadow-sm"
+          className="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-b bg-background shadow-sm"
         >
           <Container className="py-6">
             <nav aria-label="Mobile">
@@ -72,7 +72,7 @@ export default function MobileMenu() {
                         onClick={close}
                         aria-current={active ? "page" : undefined}
                         className={`block py-4 text-lg font-medium ${
-                          active ? "text-steel" : "text-navy"
+                          active ? "text-steel-dark" : "text-navy"
                         }`}
                       >
                         {label}

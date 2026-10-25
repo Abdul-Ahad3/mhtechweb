@@ -22,11 +22,17 @@ export default function SectionHeading({
       className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""} ${className}`}
     >
       {eyebrow && (
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.12em] text-steel">
+        <p
+          className={`mb-4 text-sm font-semibold uppercase tracking-[0.12em] ${
+            inverted ? "text-light-blue" : "text-steel-dark"
+          }`}
+        >
           {eyebrow}
         </p>
       )}
-      <Heading className={inverted ? "text-white" : ""}>{title}</Heading>
+      <Heading className={`break-words ${inverted ? "text-white" : ""}`}>
+        {title}
+      </Heading>
       {description && (
         <p
           className={`mt-5 text-lg ${inverted ? "text-dark-muted" : "text-muted"}`}

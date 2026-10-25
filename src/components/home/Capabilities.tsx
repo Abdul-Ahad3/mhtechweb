@@ -44,7 +44,7 @@ export default function Capabilities() {
             >
               <span
                 aria-hidden="true"
-                className="font-heading text-sm font-semibold text-steel"
+                className="font-heading text-sm font-semibold text-steel-dark"
               >
                 {String(i + 1).padStart(2, "0")}
               </span>

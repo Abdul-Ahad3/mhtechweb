@@ -15,10 +15,10 @@ const base =
   "inline-flex items-center justify-center gap-2 font-medium whitespace-nowrap";
 
 const variants: Record<Variant, string> = {
-  primary: "h-12 rounded-md bg-navy px-6 text-white hover:bg-steel",
+  primary: "h-12 rounded-md bg-navy px-6 text-white hover:bg-steel-dark",
   secondary:
     "h-12 rounded-md border border-navy px-6 text-navy hover:bg-navy hover:text-white",
-  text: "text-steel underline-offset-4 hover:text-navy hover:underline",
+  text: "min-h-11 text-steel-dark underline-offset-4 hover:text-navy hover:underline",
 };
 
 export default function Button({

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope, DM_Sans } from "next/font/google";
-import "./globals.css";
 import Navbar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
+import "./globals.css";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -31,9 +31,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${manrope.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <Navbar />
-      <body className="min-h-full flex flex-col">{children}</body>
-      <Footer />
+      <body className="min-h-full flex flex-col">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-60 focus:rounded-md focus:bg-navy focus:px-4 focus:py-2 focus:text-white"
+        >
+          Skip to main content
+        </a>
+        <Navbar />
+        <main id="main" className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

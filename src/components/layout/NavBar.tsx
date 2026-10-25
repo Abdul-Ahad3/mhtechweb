@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur">
-      <Container className="flex h-(--header-height) items-center justify-between">
+      <Container className="flex h-16 items-center justify-between lg:h-(--header-height)">
         <Link
           href="/"
           className="font-heading text-xl font-bold tracking-tight text-navy"
@@ -29,8 +29,8 @@ export default function Navbar() {
                 <Link
                   href={href}
                   aria-current={isActive(href) ? "page" : undefined}
-                  className={`text-[15px] font-medium hover:text-steel ${
-                    isActive(href) ? "text-steel" : "text-navy"
+                  className={`block py-2 text-[15px] font-medium hover:text-steel-dark ${
+                    isActive(href) ? "text-steel-dark" : "text-navy"
                   }`}
                 >
                   {label}

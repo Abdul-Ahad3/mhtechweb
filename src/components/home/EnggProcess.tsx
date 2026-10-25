@@ -24,7 +24,7 @@ const STEPS = [
   },
 ] as const;
 
-export default function EngineeringProcess() {
+export default function EnggProcess() {
   return (
     <section id="process" className="section-y border-t bg-white">
       <Container>
@@ -34,12 +34,12 @@ export default function EngineeringProcess() {
           description="Five stages that keep hardware, firmware, and software moving together."
         />
 
-        <ol className="mt-12 grid gap-10 md:grid-cols-5 md:gap-6">
+        <ol className="mt-12 grid gap-10 lg:grid-cols-5 lg:gap-6">
           {STEPS.map(({ title, description }, i) => (
-            <li key={title} className="relative pl-14 md:pl-0">
+            <li key={title} className="relative pl-14 lg:pl-0">
               <span
                 aria-hidden="true"
-                className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-steel bg-white font-heading text-sm font-semibold text-steel md:static"
+                className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-steel bg-white font-heading text-sm font-semibold text-steel-dark lg:static"
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
@@ -48,16 +48,16 @@ export default function EngineeringProcess() {
                 <>
                   <span
                     aria-hidden="true"
-                    className="absolute left-5 top-12 -bottom-10 w-px bg-border md:hidden"
+                    className="absolute left-5 top-12 -bottom-10 w-px bg-border lg:hidden"
                   />
                   <span
                     aria-hidden="true"
-                    className="absolute top-5 left-12 -right-6 hidden h-px bg-border md:block"
+                    className="absolute top-5 left-12 -right-6 hidden h-px bg-border lg:block"
                   />
                 </>
               )}
 
-              <h3 className="md:mt-6">{title}</h3>
+              <h3 className="lg:mt-6">{title}</h3>
               <p className="mt-2 text-muted">{description}</p>
             </li>
           ))}
