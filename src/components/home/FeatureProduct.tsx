@@ -2,45 +2,37 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHead";
 import Tag from "@/components/ui/Tag";
+import type { Project } from "@/types";
 
-const IMAGE_DIR = "/projects";
+type FeaturedProject = Omit<Project, "slug" | "slides">;
 
-type Project = {
-  name: string;
-  overview: string;
-  why: string;
-  parts: string[];
-  technical?: string;
-  file?: string;
-  alt?: string;
-};
-
-const PROJECTS: Project[] = [
+const PROJECTS: FeaturedProject[] = [
   {
     name: "SmartPTI Truck Inspection System",
-    overview: "A complete inspection platform connecting BLE tyre sensors with a custom embedded controller, display and purpose-built enclosure.",
-    why: "Summary coming soon.",
-    parts: ["Sensor-based inspection"],
-    file: "truck-inspection.png",
-    alt: "",
+    description:
+      "A complete inspection platform connecting BLE tyre sensors with a custom embedded controller, display and purpose-built enclosure.",
+    summary: "Summary coming soon.",
+    tags: ["Sensor-based inspection"],
+    image: { src: "truck-inspection/ti-1.png", alt: "" },
+    category: "automotive",
   },
   {
     name: "Audio Stimulator",
-    overview:
+    description:
       "A coordinated engineering platform linking a sensor wristband, mobile application, app-controlled stimulator and cloud data services.",
-    why: "Summary coming soon.",
-    parts: ["Stimulation device", "Wearable watch", "Companion app"],
-    file: "medical-platform.png",
-    alt: "",
+    summary: "Summary coming soon.",
+    tags: ["Wearable Technology", "Mobile App"],
+    image: { src: "audio-stimulator/mp-1.png", alt: "" },
+    category: "biomedical",
   },
   {
     name: "Mobile ANPR",
-    overview:
+    description:
       "A vehicle-mounted vision system combining a camera, NVIDIA Jetson edge processing and a mobile interface for automatic number plate recognition.",
-    why: "Summary coming soon.",
-    parts: ["Edge AI", "Computer vision", "Mobile"],
-    file: "mobile-anpr.png",
-    alt: "",
+    summary: "Summary coming soon.",
+    tags: ["Edge AI", "Computer vision", "Mobile"],
+    image: { src: "audio-stimulator/mp-1.png", alt: "" },
+    category: "edge-ai",
   },
 ];
 
@@ -50,13 +42,13 @@ const grid = {
   backgroundSize: "32px 32px",
 };
 
-function Media({ name, file, alt }: Pick<Project, "name" | "file" | "alt">) {
+function Media({ name, image }: Pick<FeaturedProject, "name" | "image">) {
   return (
     <div className="relative aspect-[1672/941] overflow-hidden border-b bg-hero">
-      {file ? (
+      {image ? (
         <Image
-          src={`${IMAGE_DIR}/${file}`}
-          alt={alt || name}
+          src={`/${image.src}`}
+          alt={image.alt || name}
           width={1672}
           height={941}
           sizes="(min-width: 1024px) 33vw, 100vw"
@@ -90,25 +82,25 @@ export default function FeaturedProducts() {
               key={project.name}
               className="flex flex-col overflow-hidden rounded-lg border bg-white"
             >
-              <Media name={project.name} file={project.file} alt={project.alt} />
+              <Media name={project.name} image={project.image} />
 
               <div className="flex flex-1 flex-col p-6 sm:p-8">
                 <h3 className="text-2xl">{project.name}</h3>
 
                 <ul className="mt-4 flex flex-wrap gap-2">
-                  {project.parts.map((part) => (
-                    <li key={part}>
-                      <Tag>{part}</Tag>
+                  {project.tags.map((tag) => (
+                    <li key={tag}>
+                      <Tag>{tag}</Tag>
                     </li>
                   ))}
                 </ul>
 
-                <p className="mt-6 text-muted">{project.overview}</p>
+                <p className="mt-6 text-muted">{project.description}</p>
                 <p className="mt-3 flex-1 text-muted">
                   <span className="font-medium text-navy">
                     Why it matters:{" "}
                   </span>
-                  {project.why}
+                  {project.summary}
                 </p>
 
                 <details className="group mt-8 border-t pt-2">
@@ -130,7 +122,7 @@ export default function FeaturedProducts() {
                     </svg>
                   </summary>
                   <p className="pb-2 pt-2 text-muted">
-                    {project.technical ?? "Technical details coming soon."}
+                    Technical details coming soon.
                   </p>
                 </details>
               </div>
