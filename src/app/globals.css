@@ -19,6 +19,14 @@
 
   --container-page: 1320px;
   --header-height: 5.5rem;
+
+  --animate-marquee: marquee 45s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @layer base {
