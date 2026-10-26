@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import MobileMenu from "@/components/layout/MobileMenu";
+import ThemeToggle from "@/components/layout/ThemeToggle";
 import { CONTACT_LINK, NAV_LINKS, SITE } from "@/lib/constants";
 
 export default function Navbar() {
@@ -22,7 +23,7 @@ export default function Navbar() {
           {SITE.name}
         </Link>
 
-        <nav aria-label="Main" className="hidden items-center gap-10 lg:flex">
+        <nav aria-label="Main" className="hidden items-center gap-8 lg:flex">
           <ul className="flex items-center gap-8">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={href}>
@@ -41,6 +42,7 @@ export default function Navbar() {
           <Button href={CONTACT_LINK.href} className="h-11!">
             {CONTACT_LINK.label}
           </Button>
+          <ThemeToggle />
         </nav>
 
         <MobileMenu />

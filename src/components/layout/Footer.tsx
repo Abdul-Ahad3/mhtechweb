@@ -4,7 +4,7 @@ import { CONTACT_LINK, NAV_LINKS, SITE } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-navy text-white">
+    <footer className="surface-dark bg-navy text-white">
       <Container className="py-16">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>

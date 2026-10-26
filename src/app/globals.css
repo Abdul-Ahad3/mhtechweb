@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @theme {
   --color-navy: #112b3b;
   --color-steel: #4b7eaf;
@@ -29,6 +31,19 @@
   }
 }
 
+:root[data-theme="dark"] {
+  --color-navy: #e8eef3;
+  --color-white: #172838;
+  --color-steel: #5b8fc0;
+  --color-steel-dark: #86b4e0;
+  --color-background: #0d1822;
+  --color-muted: #9fb2c0;
+  --color-border: #2a3e50;
+  --color-hero: #11202d;
+  --color-tag: #1f3345;
+  --color-focus: #5aa3de;
+}
+
 @layer base {
   *,
   ::after,
@@ -37,13 +52,23 @@
   }
 
   html {
+    color-scheme: light;
     scroll-behavior: smooth;
     scroll-padding-top: var(--header-height);
+  }
+
+  html[data-theme="dark"] {
+    color-scheme: dark;
   }
 
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
+    }
+
+    a,
+    button {
+      transition: none;
     }
   }
 
@@ -104,7 +129,12 @@
 
   ::selection {
     background: var(--color-light-blue);
-    color: var(--color-navy);
+    color: #112b3b;
+  }
+
+  html[data-theme="dark"] ::selection {
+    background: #2f5a82;
+    color: #ffffff;
   }
 }
 
@@ -129,4 +159,9 @@
   @media (min-width: 1024px) {
     padding-block: 7rem;
   }
+}
+
+@utility surface-dark {
+  --color-navy: #112b3b;
+  --color-white: #ffffff;
 }

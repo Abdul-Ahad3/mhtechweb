@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
+import ThemeToggle from "@/components/layout/ThemeToggle";
 import { CONTACT_LINK, NAV_LINKS } from "@/lib/constants";
 
 export default function MobileMenu() {
@@ -26,7 +27,8 @@ export default function MobileMenu() {
   }, [open]);
 
   return (
-    <div className="lg:hidden">
+    <div className="flex items-center gap-2 lg:hidden">
+      <ThemeToggle />
       <button
         ref={toggleRef}
         type="button"

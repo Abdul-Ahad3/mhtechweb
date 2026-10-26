@@ -4,7 +4,7 @@ import SectionHeading from "@/components/ui/SectionHead";
 
 export default function ContactCTA() {
   return (
-    <section id="contact-cta" className="section-y bg-navy">
+    <section id="contact-cta" className="surface-dark section-y bg-navy">
       <Container className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
         <SectionHeading
           inverted
