@@ -5,11 +5,18 @@ export type ProjectCategory = {
   title: string;
 };
 
+export type ProjectSlide = {
+  src: string;
+  alt: string;
+};
+
 export type Project = {
   slug: string;
   name: string;
   category: ProjectCategoryId;
   description: string;
+  summary?: string;
   tags: string[];
   image?: { src: string; alt: string };
+  slides: ProjectSlide[];
 };
