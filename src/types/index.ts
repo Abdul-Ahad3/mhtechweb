@@ -10,6 +10,14 @@ export type ProjectSlide = {
   alt: string;
 };
 
+export type ProjectDetail = {
+  overview: string[];
+  approach?: string[];
+  capabilities: string[];
+  technologies?: string[];
+  status?: string;
+};
+
 export type Project = {
   slug: string;
   name: string;
@@ -19,6 +27,7 @@ export type Project = {
   tags: string[];
   image?: { src: string; alt: string };
   slides: ProjectSlide[];
+  detail?: ProjectDetail;
 };
 
 export type ServiceCapability = {

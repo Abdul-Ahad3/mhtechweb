@@ -6,7 +6,7 @@ import { PROJECT_CATEGORIES } from "@/lib/projects";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Engineering projects by MHTechFusion across automotive, biomedical, and edge AI.",
+    "Engineering projects by MHTechFusion across automotive, biomedical, edge AI, embedded hardware, and software.",
 };
 
 export default function ProjectsPage() {

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Tag from "@/components/ui/Tag";
+import { hasRealImage } from "@/lib/projects";
 import type { Project } from "@/types";
 
 const grid = {
@@ -9,13 +10,22 @@ const grid = {
   backgroundSize: "32px 32px",
 };
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({
+  project,
+  categoryTitle,
+}: {
+  project: Project;
+  categoryTitle: string;
+}) {
   const { name, description, tags, image, slug } = project;
 
   return (
     <li className="grid gap-8 rounded-lg border bg-white p-6 transition-colors hover:border-steel sm:p-8 lg:grid-cols-2 lg:items-center lg:gap-14 lg:p-10">
       <div className="flex flex-col">
-        <h3 className="text-2xl lg:text-3xl">{name}</h3>
+        <p className="text-sm font-semibold uppercase tracking-[0.12em] text-steel-dark">
+          {categoryTitle}
+        </p>
+        <h3 className="mt-3 text-2xl lg:text-3xl">{name}</h3>
         <ul className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <li key={tag}>
@@ -37,7 +47,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="relative order-first aspect-[1672/941] overflow-hidden rounded-md border bg-hero lg:order-last">
-        {image ? (
+        {image && hasRealImage(image.src) ? (
           <Image
             src={image.src}
             alt={image.alt || name}

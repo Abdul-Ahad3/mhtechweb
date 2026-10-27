@@ -21,7 +21,11 @@ export default function CategorySection({
         <h2>{category.title}</h2>
         <ul className="mt-10 grid gap-6">
           {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              categoryTitle={category.title}
+            />
           ))}
         </ul>
       </Container>

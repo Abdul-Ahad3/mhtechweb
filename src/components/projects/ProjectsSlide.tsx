@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { useEffect, useState, useSyncExternalStore } from "react";
+import { hasRealImage } from "@/lib/projects";
 import type { ProjectSlide } from "@/types";
 
-const INTERVAL = 3000;
+const INTERVAL = 5000;
 
 const subscribeMotion = (cb: () => void) => {
   const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -103,7 +104,7 @@ export default function ProjectSlideshow({
       >
         {slides.map((slide, i) => (
           <div
-            key={slide.src}
+            key={`${slide.src}-${i}`}
             role="group"
             aria-roledescription="slide"
             aria-label={`${i + 1} of ${count}`}
@@ -112,11 +113,13 @@ export default function ProjectSlideshow({
               i === index ? "opacity-100" : "opacity-0"
             }`}
           >
-            {failed.has(i) ? (
+            {failed.has(i) || !hasRealImage(slide.src) ? (
               <>
                 <div className="absolute inset-0 opacity-60" style={grid} />
                 <p className="absolute inset-0 flex items-center justify-center px-6 text-center text-sm font-medium text-muted">
-                  Slide {i + 1} image coming soon
+                  {count > 1
+                    ? `Slide ${i + 1} image coming soon`
+                    : "Image coming soon"}
                 </p>
               </>
             ) : (
@@ -134,65 +137,67 @@ export default function ProjectSlideshow({
         ))}
       </div>
 
-      <div className="mt-3 flex items-center justify-between gap-4">
-        <div className="flex items-center">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              aria-label={`Go to slide ${i + 1}`}
-              aria-current={i === index}
-              onClick={() => go(i)}
-              className="flex h-11 w-8 items-center justify-center"
-            >
-              <span
-                className={`h-1 w-6 rounded-full transition-colors ${
-                  i === index ? "bg-steel-dark" : "bg-border"
-                }`}
-              />
-            </button>
-          ))}
-        </div>
+      {count > 1 && (
+        <div className="mt-3 flex items-center justify-between gap-4">
+          <div className="flex items-center">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Go to slide ${i + 1}`}
+                aria-current={i === index}
+                onClick={() => go(i)}
+                className="flex h-11 w-8 items-center justify-center"
+              >
+                <span
+                  className={`h-1 w-6 rounded-full transition-colors ${
+                    i === index ? "bg-steel-dark" : "bg-border"
+                  }`}
+                />
+              </button>
+            ))}
+          </div>
 
-        <div className="flex items-center gap-2">
-          {!reducedMotion && count > 1 && (
+          <div className="flex items-center gap-2">
+            {!reducedMotion && (
+              <button
+                type="button"
+                aria-label={userPaused ? "Play slideshow" : "Pause slideshow"}
+                onClick={() => setUserPaused((v) => !v)}
+                className={iconBtn}
+              >
+                <Icon>
+                  {userPaused ? (
+                    <path d="M5 3.5v11l9-5.5z" />
+                  ) : (
+                    <path d="M6 4v10M12 4v10" />
+                  )}
+                </Icon>
+              </button>
+            )}
             <button
               type="button"
-              aria-label={userPaused ? "Play slideshow" : "Pause slideshow"}
-              onClick={() => setUserPaused((v) => !v)}
+              aria-label="Previous slide"
+              onClick={() => go(index - 1)}
               className={iconBtn}
             >
               <Icon>
-                {userPaused ? (
-                  <path d="M5 3.5v11l9-5.5z" />
-                ) : (
-                  <path d="M6 4v10M12 4v10" />
-                )}
+                <path d="M11 4L6 9l5 5" />
               </Icon>
             </button>
-          )}
-          <button
-            type="button"
-            aria-label="Previous slide"
-            onClick={() => go(index - 1)}
-            className={iconBtn}
-          >
-            <Icon>
-              <path d="M11 4L6 9l5 5" />
-            </Icon>
-          </button>
-          <button
-            type="button"
-            aria-label="Next slide"
-            onClick={() => go(index + 1)}
-            className={iconBtn}
-          >
-            <Icon>
-              <path d="M7 4l5 5-5 5" />
-            </Icon>
-          </button>
+            <button
+              type="button"
+              aria-label="Next slide"
+              onClick={() => go(index + 1)}
+              className={iconBtn}
+            >
+              <Icon>
+                <path d="M7 4l5 5-5 5" />
+              </Icon>
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

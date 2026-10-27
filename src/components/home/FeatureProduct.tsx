@@ -31,7 +31,7 @@ const PROJECTS: FeaturedProject[] = [
       "A vehicle-mounted vision system combining a camera, NVIDIA Jetson edge processing and a mobile interface for automatic number plate recognition.",
     summary: "Summary coming soon.",
     tags: ["Edge AI", "Computer vision", "Mobile"],
-    image: { src: "audio-stimulator/mp-1.png", alt: "" },
+    image: { src: "mobile-anpr/ma-1.png", alt: "" },
     category: "edge-ai",
   },
 ];
