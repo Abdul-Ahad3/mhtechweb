@@ -20,12 +20,20 @@ export const PROJECTS: Project[] = [
       "A dedicated embedded vehicle-inspection system that brings tyre-pressure, brake-test, location, and connectivity checks together on one microcontroller-based platform.",
     tags: ["Embedded firmware", "BLE sensors", "GPS & LTE"],
     image: {
-      src: "REPLACE_WITH_SMARTPTI_IMAGE_PATH",
+      src: "/truck-inspection/ti-1.png",
       alt: "SmartPTI truck inspection system",
     },
     slides: [
       {
-        src: "REPLACE_WITH_SMARTPTI_IMAGE_PATH",
+        src: "/truck-inspection/ti-1.png",
+        alt: "SmartPTI truck inspection system",
+      },
+      {
+        src: "/truck-inspection/ti-2.jpg",
+        alt: "SmartPTI truck inspection system",
+      },
+      {
+        src: "/truck-inspection/ti-3.jpg",
         alt: "SmartPTI truck inspection system",
       },
     ],
@@ -69,12 +77,40 @@ export const PROJECTS: Project[] = [
       "An integrated wearable-sensing and stimulation project combining a sensor wearable, a programmable stimulation device, and a companion application.",
     tags: ["Wearable sensing", "Bluetooth LE", "Companion app"],
     image: {
-      src: "REPLACE_WITH_AUDIO_STIMULATOR_IMAGE_PATH",
+      src: "/audio-stimulator/mp-1.png",
       alt: "Smart wearable and stimulation system",
     },
     slides: [
       {
-        src: "REPLACE_WITH_AUDIO_STIMULATOR_IMAGE_PATH",
+        src: "/audio-stimulator/mp-1.png",
+        alt: "Smart wearable and stimulation system",
+      },
+      {
+        src: "/audio-stimulator/mp-2.jpg",
+        alt: "Smart wearable and stimulation system",
+      },
+      {
+        src: "/audio-stimulator/mp-3.jpg",
+        alt: "Smart wearable and stimulation system",
+      },
+      {
+        src: "/audio-stimulator/mp-4.jpg",
+        alt: "Smart wearable and stimulation system",
+      },
+      {
+        src: "/audio-stimulator/mp-5.jpg",
+        alt: "Smart wearable and stimulation system",
+      },
+      {
+        src: "/audio-stimulator/mp-6.jpg",
+        alt: "Smart wearable and stimulation system",
+      },
+      {
+        src: "/audio-stimulator/mp-7.jpg",
+        alt: "Smart wearable and stimulation system",
+      },
+      {
+        src: "/audio-stimulator/mp-8.jpg",
         alt: "Smart wearable and stimulation system",
       },
     ],
@@ -118,12 +154,16 @@ export const PROJECTS: Project[] = [
       "A computer-vision system that recognizes vehicle number plates automatically and presents results through a mobile interface.",
     tags: ["Computer vision", "Edge AI", "Mobile app"],
     image: {
-      src: "REPLACE_WITH_MOBILE_ANPR_IMAGE_PATH",
+      src: "/mobile-anpr/ma-1.png",
       alt: "Mobile ANPR system",
     },
     slides: [
       {
-        src: "REPLACE_WITH_MOBILE_ANPR_IMAGE_PATH",
+        src: "/mobile-anpr/ma-1.png",
+        alt: "Mobile ANPR system",
+      },
+      {
+        src: "/mobile-anpr/ma-2.jpg",
         alt: "Mobile ANPR system",
       },
     ],
@@ -158,12 +198,16 @@ export const PROJECTS: Project[] = [
       "An AI-powered system intended to turn camera views of exhibition-style environments into insight about visitor movement and engagement.",
     tags: ["Computer vision", "Edge AI", "Analytics"],
     image: {
-      src: "REPLACE_WITH_CROWD_ANALYTICS_IMAGE_PATH",
+      src: "/crowd-analytics/ca-1.jpg",
       alt: "AI crowd analytics system",
     },
     slides: [
       {
-        src: "REPLACE_WITH_CROWD_ANALYTICS_IMAGE_PATH",
+        src: "/crowd-analytics/ca-1.jpg",
+        alt: "AI crowd analytics system",
+      },
+      {
+        src: "/crowd-analytics/ca-2.jpg",
         alt: "AI crowd analytics system",
       },
     ],
@@ -201,12 +245,16 @@ export const PROJECTS: Project[] = [
       "An embedded speech-translation device designed to translate spoken language locally, without depending on cloud connectivity.",
     tags: ["NVIDIA Jetson", "Speech translation", "On-device"],
     image: {
-      src: "REPLACE_WITH_RTTA_IMAGE_PATH",
+      src: "/rtta/rtta-1.jpg",
       alt: "RTTA offline real-time translator",
     },
     slides: [
       {
-        src: "REPLACE_WITH_RTTA_IMAGE_PATH",
+        src: "/rtta/rtta-1.jpg",
+        alt: "RTTA offline real-time translator",
+      },
+      {
+        src: "/rtta/rtta-2.jpg",
         alt: "RTTA offline real-time translator",
       },
     ],
@@ -244,12 +292,28 @@ export const PROJECTS: Project[] = [
       "An enterprise AI and retrieval-augmented generation platform designed around governance, controlled access, and traceability.",
     tags: ["Enterprise AI", "RAG", "Governance"],
     image: {
-      src: "REPLACE_WITH_CRADLE_AI_IMAGE_PATH",
+      src: "/cradle-ai/cai-4.jpg",
       alt: "Cradle AI platform",
     },
     slides: [
       {
-        src: "REPLACE_WITH_CRADLE_AI_IMAGE_PATH",
+        src: "/cradle-ai/cai-1.jpg",
+        alt: "Cradle AI platform",
+      },
+      {
+        src: "/cradle-ai/cai-2.jpg",
+        alt: "Cradle AI platform",
+      },
+      {
+        src: "/cradle-ai/cai-3.jpg",
+        alt: "Cradle AI platform",
+      },
+      {
+        src: "/cradle-ai/cai-4.jpg",
+        alt: "Cradle AI platform",
+      },
+      {
+        src: "/cradle-ai/cai-5.jpg",
         alt: "Cradle AI platform",
       },
     ],
@@ -286,12 +350,12 @@ export const PROJECTS: Project[] = [
       "An AI-powered keyboard app that helps users communicate across languages and improve their written responses.",
     tags: ["AI keyboard", "Translation", "Writing assistance"],
     image: {
-      src: "REPLACE_WITH_TALKSHIFT_IMAGE_PATH",
+      src: "/talkshift/ts-1.png",
       alt: "TalkShift keyboard app",
     },
     slides: [
       {
-        src: "REPLACE_WITH_TALKSHIFT_IMAGE_PATH",
+        src: "/talkshift/ts-1.png",
         alt: "TalkShift keyboard app",
       },
     ],
@@ -316,12 +380,28 @@ export const PROJECTS: Project[] = [
       "A Python optimisation system that plans Fantasy Premier League transfers, chips, and lineups across multiple gameweeks.",
     tags: ["Python", "Google OR-Tools", "CP-SAT"],
     image: {
-      src: "REPLACE_WITH_FPL_IMAGE_PATH",
+      src: "/fpl/fpl-1.jpg",
       alt: "FPL transfer optimisation system",
     },
     slides: [
       {
-        src: "REPLACE_WITH_FPL_IMAGE_PATH",
+        src: "/fpl/fpl-1.jpg",
+        alt: "FPL transfer optimisation system",
+      },
+      {
+        src: "/fpl/fpl-2.jpg",
+        alt: "FPL transfer optimisation system",
+      },
+      {
+        src: "/fpl/fpl-3.jpg",
+        alt: "FPL transfer optimisation system",
+      },
+      {
+        src: "/fpl/fpl-4.jpg",
+        alt: "FPL transfer optimisation system",
+      },
+      {
+        src: "/fpl/fpl-5.jpg",
         alt: "FPL transfer optimisation system",
       },
     ],
@@ -361,12 +441,12 @@ export const PROJECTS: Project[] = [
       "A real-time computer-vision project that links object detection and tracking to physical actuation in a Nintendo Switch-related application.",
     tags: ["Object detection", "Real-time control", "Hardware actuation"],
     image: {
-      src: "REPLACE_WITH_RTAI_VISION_IMAGE_PATH",
+      src: "/rtai-vision/rtai-1.png",
       alt: "Real-time AI vision system",
     },
     slides: [
       {
-        src: "REPLACE_WITH_RTAI_VISION_IMAGE_PATH",
+        src: "/rtai-vision/rtai-1.png",
         alt: "Real-time AI vision system",
       },
     ],
