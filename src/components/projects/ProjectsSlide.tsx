@@ -88,7 +88,7 @@ export default function ProjectSlideshow({
       role="group"
       aria-roledescription="carousel"
       aria-label={`${name} slideshow`}
-      className="flex flex-col lg:max-w-[calc((100dvh_-_var(--header-height)_-_20rem)_*_1672/941)]"
+      className="flex w-full flex-col"
       onMouseEnter={() => setEngaged(true)}
       onMouseLeave={() => setEngaged(false)}
       onFocus={() => setEngaged(true)}
