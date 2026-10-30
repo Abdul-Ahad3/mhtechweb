@@ -27,15 +27,7 @@ export const PROJECTS: Project[] = [
       {
         src: "/truck-inspection/ti-1.png",
         alt: "SmartPTI truck inspection system",
-      },
-      {
-        src: "/truck-inspection/ti-2.jpg",
-        alt: "SmartPTI truck inspection system",
-      },
-      {
-        src: "/truck-inspection/ti-3.jpg",
-        alt: "SmartPTI truck inspection system",
-      },
+      }
     ],
     detail: {
       overview: [
@@ -91,26 +83,6 @@ export const PROJECTS: Project[] = [
       },
       {
         src: "/audio-stimulator/mp-3.jpg",
-        alt: "Smart wearable and stimulation system",
-      },
-      {
-        src: "/audio-stimulator/mp-4.jpg",
-        alt: "Smart wearable and stimulation system",
-      },
-      {
-        src: "/audio-stimulator/mp-5.jpg",
-        alt: "Smart wearable and stimulation system",
-      },
-      {
-        src: "/audio-stimulator/mp-6.jpg",
-        alt: "Smart wearable and stimulation system",
-      },
-      {
-        src: "/audio-stimulator/mp-7.jpg",
-        alt: "Smart wearable and stimulation system",
-      },
-      {
-        src: "/audio-stimulator/mp-8.jpg",
         alt: "Smart wearable and stimulation system",
       },
     ],
@@ -239,7 +211,7 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "rtta",
-    name: "RTTA Offline Real-Time Translator",
+    name: "RTTA: Offline and Calling Real-Time Translator",
     category: "app-dev",
     description:
       "An embedded speech-translation device designed to translate spoken language locally, without depending on cloud connectivity.",
@@ -251,10 +223,6 @@ export const PROJECTS: Project[] = [
     slides: [
       {
         src: "/rtta/rtta-1.jpg",
-        alt: "RTTA offline real-time translator",
-      },
-      {
-        src: "/rtta/rtta-2.jpg",
         alt: "RTTA offline real-time translator",
       },
     ],
