@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import Logo from "@/components/layout/Logo";
 import { CONTACT_LINK, NAV_LINKS, SITE } from "@/lib/constants";
 
 export default function Footer() {
@@ -8,7 +9,10 @@ export default function Footer() {
       <Container className="py-16">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
-            <p className="font-heading text-xl font-bold">{SITE.name}</p>
+            <div className="flex items-center gap-3">
+              <Logo onDark className="h-9" />
+              <p className="font-heading text-xl font-bold">{SITE.name}</p>
+            </div>
             <p className="mt-4 max-w-sm text-dark-muted">{SITE.description}</p>
           </div>
 
@@ -44,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 border-t border-dark-border pt-6 text-sm text-dark-muted">
-          © 2026 {SITE.name}. All rights reserved.
+          © {SITE.name}. All rights reserved.
         </div>
       </Container>
     </footer>

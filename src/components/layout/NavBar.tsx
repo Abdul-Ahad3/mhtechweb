@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
+import Logo from "@/components/layout/Logo";
 import MobileMenu from "@/components/layout/MobileMenu";
 import ThemeToggle from "@/components/layout/ThemeToggle";
 import { CONTACT_LINK, NAV_LINKS, SITE } from "@/lib/constants";
@@ -18,8 +19,9 @@ export default function Navbar() {
       <Container className="flex h-16 items-center justify-between lg:h-(--header-height)">
         <Link
           href="/"
-          className="font-heading text-xl font-bold tracking-tight text-navy"
+          className="flex items-center gap-3 font-heading text-xl font-bold tracking-tight text-navy"
         >
+          <Logo />
           {SITE.name}
         </Link>
 
