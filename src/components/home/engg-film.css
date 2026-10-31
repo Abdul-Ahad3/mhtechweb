@@ -1,0 +1,177 @@
+.engineering-film {
+  --art: #94bfdc;
+  --film-duration: 5.2s;
+}
+
+.engineering-film .film-screen {
+  background: #112b3b;
+  color: var(--art);
+}
+
+.engineering-film .film-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#accce50a 1px, transparent 1px),
+    linear-gradient(90deg, #accce50a 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: linear-gradient(transparent, #000 20%, #000 85%, transparent);
+  pointer-events: none;
+}
+
+.film-art svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Stage progress */
+.film-step::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-border);
+}
+.film-step.done::after {
+  background: var(--color-steel);
+  opacity: 0.55;
+}
+.film-step i {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--color-steel);
+  z-index: 1;
+}
+.film-step.active i {
+  animation: film-progress var(--film-duration) linear forwards;
+  animation-play-state: paused;
+}
+.engineering-film:not(.is-paused) .film-step.active i {
+  animation-play-state: running;
+}
+.film-step.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 2px);
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  background: var(--color-steel);
+}
+
+/* Stage art */
+.film-art .art-label { fill: #c7ddeb; font-family: var(--font-sans); font-size: 8px; font-weight: 600; letter-spacing: 0.7px; }
+.film-art .art-small { fill: #91adbf; font-family: var(--font-sans); font-size: 7.1px; letter-spacing: 0.25px; }
+.film-art .chip-label { fill: #d1e9f8; text-anchor: middle; font-family: var(--font-sans); font-size: 10px; letter-spacing: 1.8px; }
+.film-art .line-number { fill: #627f94; font-family: monospace; font-size: 10px; }
+.film-art .code-text { fill: #b6d5e9; font-family: monospace; font-size: 11px; }
+.film-art .art-panel { fill: #17374b; stroke: #4a718d; stroke-width: 1; }
+.film-art .orbit-ring { fill: none; stroke: #547e9a; stroke-width: 1; stroke-dasharray: 3 5; opacity: 0.6; }
+.film-art .orbit-ring.outer { stroke: #64879f; opacity: 0.3; }
+.film-art .orbit-ring.tilted { transform: rotate(-25deg); transform-origin: 261px 138px; }
+.film-art .art-dot { fill: #c3e6fc; }
+.film-art .chip-fill { fill: #24506c; stroke: #8cb8d5; stroke-width: 1.5; }
+.film-art .small-part { fill: #254b63; stroke: #8cb8d5; stroke-width: 1.2; }
+.film-art .quiet-line { fill: none; stroke: #50718a; stroke-width: 1.3; stroke-linecap: round; }
+.film-art .accent-line { fill: none; stroke: #a9cfe7; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.film-art .check-circle { fill: #244d5d; stroke: #9acabb; stroke-width: 1.2; }
+.film-art .board-outline { fill: #163748; stroke: #6b9ab5; stroke-width: 1.5; }
+.film-art .dimension-line { fill: none; stroke: #698ca5; stroke-width: 1; stroke-dasharray: 4 5; }
+.film-art .cad-base { fill: #193d53; stroke: #95c0de; stroke-width: 1.5; stroke-linejoin: round; }
+.film-art .cad-circuit { fill: #285c69; stroke: #98cbbd; stroke-width: 1.4; stroke-linejoin: round; }
+.film-art .cad-top { fill: #24485f; stroke: #b6d5e9; stroke-width: 1.5; stroke-linejoin: round; }
+.film-art .cad-side { fill: #153549; stroke: #95c0de; stroke-width: 1.5; stroke-linejoin: round; }
+.film-art .scope-bg { fill: #102b3b; stroke: #42627a; stroke-width: 1; }
+.film-art .scope-grid { stroke: #42627a; stroke-width: 0.5; opacity: 0.5; fill: none; }
+.film-art .scope-wave { fill: none; stroke: #a2d0bf; stroke-width: 1.7; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: film-line-draw 2.2s ease both; }
+.film-art .scope-scan { stroke: #a8d6cf; stroke-width: 1; opacity: 0.4; animation: film-scope-scan 3s linear infinite; }
+.film-art .revision-old { fill: #183549; stroke: #54758c; stroke-width: 1; opacity: 0.7; }
+.film-art .review-mark { fill: none; stroke: #bba68c; stroke-width: 1.5; }
+
+.film-art .draw-line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: film-line-draw 1.8s 0.15s ease forwards; }
+.film-art .appear { animation: film-art-appear 0.8s 0.15s both; }
+.film-art .film-delay-1 { animation-delay: 0.35s !important; }
+.film-art .film-delay-2 { animation-delay: 0.7s !important; }
+.film-art .film-delay-3 { animation-delay: 1.05s !important; }
+.film-art .film-delay-4 { animation-delay: 1.4s !important; }
+.film-art .bar-grow { fill: #709dbb; transform-box: fill-box; transform-origin: left; animation: film-bar-grow 1.4s both; }
+.film-art .code-line { animation: film-art-appear 0.5s both; }
+.film-art .code-cursor { fill: #9ec3dc; animation: film-cursor-blink 1.2s steps(2, jump-none) infinite; }
+.film-art .signal-line { fill: none; stroke: #aacfc7; stroke-width: 1.6; stroke-dasharray: 150; stroke-dashoffset: 150; animation: film-signal-draw 2s 0.8s forwards; }
+.film-art .idea-rays { animation: film-idea-glow 3s ease-in-out infinite; }
+.film-art .travelling-dot { animation: film-dot-travel 3s ease-in-out infinite; fill: #c4e2f5; }
+.film-art .cad-lid { animation: film-lid-rise 2.2s ease both; }
+.film-art .cad-board { animation: film-board-rise 2s ease both; }
+.film-art .cad-bottom { animation: film-art-appear 1s both; }
+.film-art .final-product { animation: film-product-arrive 1.5s both; }
+
+/* Paused: loops freeze, one-shot scenes show their finished state */
+.engineering-film.is-paused .film-art .idea-rays,
+.engineering-film.is-paused .film-art .travelling-dot,
+.engineering-film.is-paused .film-art .code-cursor,
+.engineering-film.is-paused .film-art .scope-scan {
+  animation-play-state: paused !important;
+}
+.engineering-film.is-paused .film-art .draw-line,
+.engineering-film.is-paused .film-art .signal-line,
+.engineering-film.is-paused .film-art .scope-wave {
+  animation: none !important;
+  stroke-dashoffset: 0 !important;
+}
+.engineering-film.is-paused .film-art .appear,
+.engineering-film.is-paused .film-art .code-line,
+.engineering-film.is-paused .film-art .final-product,
+.engineering-film.is-paused .film-art .cad-lid,
+.engineering-film.is-paused .film-art .cad-board,
+.engineering-film.is-paused .film-art .cad-bottom {
+  animation: none !important;
+  opacity: 1;
+  transform: none;
+}
+.engineering-film.is-paused .film-art .bar-grow {
+  animation: none !important;
+  transform: scaleX(1);
+}
+
+@keyframes film-progress { from { width: 0; } to { width: 100%; } }
+@keyframes film-line-draw { to { stroke-dashoffset: 0; } }
+@keyframes film-art-appear { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes film-bar-grow { from { transform: scaleX(0.03); } to { transform: scaleX(1); } }
+@keyframes film-cursor-blink { 50% { opacity: 0; } }
+@keyframes film-signal-draw { to { stroke-dashoffset: 0; } }
+@keyframes film-idea-glow { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
+@keyframes film-dot-travel { 0% { transform: translateX(0); opacity: 0; } 20% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(-54px); opacity: 0; } }
+@keyframes film-lid-rise { from { transform: translateY(78px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes film-board-rise { from { transform: translateY(35px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes film-product-arrive { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes film-scope-scan { from { transform: translateX(-110px); } to { transform: translateX(130px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .film-art * {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+  .film-art .appear,
+  .film-art .code-line,
+  .film-art .final-product,
+  .film-art .cad-lid,
+  .film-art .cad-board {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .film-art .bar-grow {
+    transform: scaleX(1);
+  }
+  .film-art .scope-scan,
+  .film-art .travelling-dot {
+    display: none;
+  }
+}
