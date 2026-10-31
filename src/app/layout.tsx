@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   },
   description:
     "MHTechFusion designs and builds connected products across embedded systems, PCB and hardware design, firmware, IoT, AI, and software.",
+    icons: {
+      icon: [{ url: '/logo.png', type: 'image/png' }],
+      apple: '/logo.png'
+    }
 };
 
 const themeScript = `(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t})()`;

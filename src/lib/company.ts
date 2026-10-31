@@ -7,7 +7,7 @@ export const COMPANY_CONTACT = {
 };
 
 export const COMPANY_LOGO = {
-  light: "/icon.png",
+  light: "/logo.png",
   dark: "",
   alt: "MHTechFusion logo",
   width: 288,
