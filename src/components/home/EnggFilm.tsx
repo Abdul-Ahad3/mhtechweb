@@ -81,16 +81,16 @@ export default function EngineeringFilm() {
     <section
       ref={rootRef}
       aria-label="Animated product development journey"
-      className={`engineering-film w-full min-w-0 overflow-hidden rounded-lg border bg-white ${
+      className={`engineering-film w-full min-w-0 overflow-hidden rounded-lg border bg-white shadow-[0_28px_70px_-28px_rgba(75,126,175,0.6)] dark:shadow-[0_28px_80px_-24px_rgba(91,143,192,0.4)] ${
         stopped ? "is-paused" : ""
       }`}
     >
       <div className="flex items-center justify-between gap-4 px-5 py-4 text-[11px] font-semibold tracking-[0.12em] text-muted">
-        <span className="flex items-center gap-2">
-          <span
-            aria-hidden="true"
-            className="h-1.5 w-1.5 rounded-full bg-steel"
-          />
+        <span className="flex items-center gap-2.5">
+          <span aria-hidden="true" className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full rounded-full bg-steel opacity-60 motion-safe:animate-ping" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-steel" />
+          </span>
           THE ENGINEERING JOURNEY
         </span>
         <span className="tabular-nums tracking-[0.16em]">

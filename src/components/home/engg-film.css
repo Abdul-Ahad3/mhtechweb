@@ -3,22 +3,66 @@
   --film-duration: 5.2s;
 }
 
+/* Screen: depth, light, corner brackets */
 .engineering-film .film-screen {
-  background: #112b3b;
+  background:
+    radial-gradient(70% 90% at 78% 0%, rgba(75, 126, 175, 0.34), transparent 70%),
+    radial-gradient(60% 80% at 0% 100%, rgba(127, 208, 255, 0.1), transparent 70%),
+    #112b3b;
   color: var(--art);
+  box-shadow:
+    inset 0 0 0 1px rgba(172, 204, 229, 0.14),
+    inset 0 0 60px rgba(75, 126, 175, 0.14);
+}
+
+.engineering-film .film-screen::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.75;
+  background:
+    linear-gradient(#7fb0de, #7fb0de) top left / 14px 1.5px no-repeat,
+    linear-gradient(#7fb0de, #7fb0de) top left / 1.5px 14px no-repeat,
+    linear-gradient(#7fb0de, #7fb0de) top right / 14px 1.5px no-repeat,
+    linear-gradient(#7fb0de, #7fb0de) top right / 1.5px 14px no-repeat,
+    linear-gradient(#7fb0de, #7fb0de) bottom left / 14px 1.5px no-repeat,
+    linear-gradient(#7fb0de, #7fb0de) bottom left / 1.5px 14px no-repeat,
+    linear-gradient(#7fb0de, #7fb0de) bottom right / 14px 1.5px no-repeat,
+    linear-gradient(#7fb0de, #7fb0de) bottom right / 1.5px 14px no-repeat;
 }
 
 .engineering-film .film-grid {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(#accce50a 1px, transparent 1px),
-    linear-gradient(90deg, #accce50a 1px, transparent 1px);
+    linear-gradient(#accce50f 1px, transparent 1px),
+    linear-gradient(90deg, #accce50f 1px, transparent 1px);
   background-size: 24px 24px;
   mask-image: linear-gradient(transparent, #000 20%, #000 85%, transparent);
   pointer-events: none;
+  animation: film-grid-drift 14s linear infinite;
 }
 
+.film-art {
+  animation: film-stage-in 0.7s ease backwards;
+}
+.film-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgba(172, 204, 229, 0.22) 50%,
+    transparent 65%
+  );
+  transform: translateX(-120%);
+  animation: film-sheen 0.9s 0.05s ease-out forwards;
+}
 .film-art svg {
   width: 100%;
   height: 100%;
@@ -47,6 +91,7 @@
   height: 2px;
   width: 0;
   background: var(--color-steel);
+  box-shadow: 0 0 8px var(--color-steel);
   z-index: 1;
 }
 .film-step.active i {
@@ -61,15 +106,17 @@
   position: absolute;
   top: 0;
   left: calc(50% - 2px);
-  height: 3px;
-  width: 3px;
+  height: 4px;
+  width: 4px;
   border-radius: 50%;
   background: var(--color-steel);
+  box-shadow: 0 0 6px var(--color-steel);
 }
 
 /* Stage art */
 .film-art .art-label { fill: #c7ddeb; font-family: var(--font-sans); font-size: 8px; font-weight: 600; letter-spacing: 0.7px; }
 .film-art .art-small { fill: #91adbf; font-family: var(--font-sans); font-size: 7.1px; letter-spacing: 0.25px; }
+.film-art .art-center { text-anchor: middle; }
 .film-art .chip-label { fill: #d1e9f8; text-anchor: middle; font-family: var(--font-sans); font-size: 10px; letter-spacing: 1.8px; }
 .film-art .line-number { fill: #627f94; font-family: monospace; font-size: 10px; }
 .film-art .code-text { fill: #b6d5e9; font-family: monospace; font-size: 11px; }
@@ -78,13 +125,14 @@
 .film-art .orbit-ring.outer { stroke: #64879f; opacity: 0.3; }
 .film-art .orbit-ring.tilted { transform: rotate(-25deg); transform-origin: 261px 138px; }
 .film-art .art-dot { fill: #c3e6fc; }
-.film-art .chip-fill { fill: #24506c; stroke: #8cb8d5; stroke-width: 1.5; }
+.film-art .chip-fill { fill: #24506c; stroke: #8cb8d5; stroke-width: 1.5; filter: drop-shadow(0 0 6px rgba(140, 184, 213, 0.35)); }
 .film-art .small-part { fill: #254b63; stroke: #8cb8d5; stroke-width: 1.2; }
 .film-art .quiet-line { fill: none; stroke: #50718a; stroke-width: 1.3; stroke-linecap: round; }
 .film-art .accent-line { fill: none; stroke: #a9cfe7; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.film-art .check-circle { fill: #244d5d; stroke: #9acabb; stroke-width: 1.2; }
+.film-art .check-circle { fill: #244d5d; stroke: #9acabb; stroke-width: 1.2; filter: drop-shadow(0 0 4px rgba(154, 202, 187, 0.55)); }
 .film-art .board-outline { fill: #163748; stroke: #6b9ab5; stroke-width: 1.5; }
 .film-art .dimension-line { fill: none; stroke: #698ca5; stroke-width: 1; stroke-dasharray: 4 5; }
+.film-art .callout { fill: none; stroke: #8fb4cc; stroke-width: 1; }
 .film-art .cad-base { fill: #193d53; stroke: #95c0de; stroke-width: 1.5; stroke-linejoin: round; }
 .film-art .cad-circuit { fill: #285c69; stroke: #98cbbd; stroke-width: 1.4; stroke-linejoin: round; }
 .film-art .cad-top { fill: #24485f; stroke: #b6d5e9; stroke-width: 1.5; stroke-linejoin: round; }
@@ -107,17 +155,115 @@
 .film-art .code-cursor { fill: #9ec3dc; animation: film-cursor-blink 1.2s steps(2, jump-none) infinite; }
 .film-art .signal-line { fill: none; stroke: #aacfc7; stroke-width: 1.6; stroke-dasharray: 150; stroke-dashoffset: 150; animation: film-signal-draw 2s 0.8s forwards; }
 .film-art .idea-rays { animation: film-idea-glow 3s ease-in-out infinite; }
+.film-art .idea-rays .draw-line { stroke: #ffe29a; }
 .film-art .travelling-dot { animation: film-dot-travel 3s ease-in-out infinite; fill: #c4e2f5; }
 .film-art .cad-lid { animation: film-lid-rise 2.2s ease both; }
 .film-art .cad-board { animation: film-board-rise 2s ease both; }
 .film-art .cad-bottom { animation: film-art-appear 1s both; }
 .film-art .final-product { animation: film-product-arrive 1.5s both; }
 
+/* Brainstorming: the bulb lights up */
+.film-art .bulb-glow,
+.film-art .bulb-core {
+  opacity: 0.9;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation:
+    film-bulb-on 1.5s 1.4s ease both,
+    film-bulb-pulse 3s 2.9s ease-in-out infinite;
+}
+.film-art .bulb-core {
+  animation:
+    film-bulb-on 1.5s 1.4s ease both,
+    film-bulb-pulse 2.2s 2.9s ease-in-out infinite reverse;
+}
+.film-art .bulb-lit { filter: drop-shadow(0 0 5px rgba(255, 226, 154, 0.75)); }
+.film-art .bulb-lit .draw-line {
+  stroke: #ffeeb8;
+  animation:
+    film-line-draw 1.8s 0.15s ease forwards,
+    film-bulb-stroke 0.6s 1.7s ease both;
+}
+
+/* R&D: electrical tendrils */
+.film-art .chip-halo,
+.film-art .soft-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: film-halo 2.6s ease-in-out infinite;
+}
+.film-art .tendril-base {
+  fill: none;
+  stroke: #7fd0ff;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.28;
+}
+.film-art .tendril {
+  fill: none;
+  stroke: #bfeaff;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 0.3 1;
+  stroke-dashoffset: 0;
+  filter: drop-shadow(0 0 3px #6fc8ff);
+  animation: film-tendril 1.8s linear infinite backwards;
+}
+.film-art .spark-tip {
+  fill: #d9f3ff;
+  filter: drop-shadow(0 0 4px #6fc8ff);
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: film-spark 1.8s ease-out infinite;
+}
+
+/* PCB: data pulses along the traces */
+.film-art .pulse-dot {
+  display: none;
+  fill: #d9f3ff;
+  filter: drop-shadow(0 0 4px #7fd0ff);
+}
+@supports (offset-path: path("M0 0")) {
+  .film-art .pulse-dot {
+    display: block;
+    offset-distance: 0%;
+    animation: film-trace-run 2.6s linear infinite backwards;
+  }
+}
+
+/* Revisions: the two cycle arrows drift gently */
+.film-art .sway-a,
+.film-art .sway-b {
+  transform-box: view-box;
+  transform-origin: 260px 150px;
+  animation: film-sway 4.2s ease-in-out infinite;
+}
+.film-art .sway-b { animation-direction: reverse; }
+
+/* Handover: sparkles */
+.film-art .sparkle {
+  fill: #e6f6ff;
+  opacity: 0.85;
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 0 4px #9fd4ff);
+  animation: film-twinkle 2.4s ease-in-out infinite backwards;
+}
+
 /* Paused: loops freeze, one-shot scenes show their finished state */
 .engineering-film.is-paused .film-art .idea-rays,
 .engineering-film.is-paused .film-art .travelling-dot,
 .engineering-film.is-paused .film-art .code-cursor,
-.engineering-film.is-paused .film-art .scope-scan {
+.engineering-film.is-paused .film-art .scope-scan,
+.engineering-film.is-paused .film-art .chip-halo,
+.engineering-film.is-paused .film-art .soft-pulse,
+.engineering-film.is-paused .film-art .pulse-dot,
+.engineering-film.is-paused .film-art .sway-a,
+.engineering-film.is-paused .film-art .sway-b,
+.engineering-film.is-paused .film-grid {
   animation-play-state: paused !important;
 }
 .engineering-film.is-paused .film-art .draw-line,
@@ -140,6 +286,20 @@
   animation: none !important;
   transform: scaleX(1);
 }
+.engineering-film.is-paused .film-art .bulb-glow,
+.engineering-film.is-paused .film-art .bulb-core,
+.engineering-film.is-paused .film-art .sparkle {
+  animation: none !important;
+}
+.engineering-film.is-paused .film-art .tendril {
+  animation: none !important;
+  stroke-dasharray: none;
+  opacity: 0.8;
+}
+.engineering-film.is-paused .film-art .spark-tip {
+  animation: none !important;
+  opacity: 0.8;
+}
 
 @keyframes film-progress { from { width: 0; } to { width: 100%; } }
 @keyframes film-line-draw { to { stroke-dashoffset: 0; } }
@@ -153,8 +313,27 @@
 @keyframes film-board-rise { from { transform: translateY(35px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 @keyframes film-product-arrive { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes film-scope-scan { from { transform: translateX(-110px); } to { transform: translateX(130px); } }
+@keyframes film-stage-in { from { opacity: 0; transform: scale(0.97); filter: blur(5px); } to { opacity: 1; transform: none; filter: blur(0); } }
+@keyframes film-sheen { to { transform: translateX(120%); } }
+@keyframes film-grid-drift { to { background-position: 24px 24px; } }
+@keyframes film-bulb-on { 0% { opacity: 0; } 12% { opacity: 0.9; } 20% { opacity: 0.1; } 34% { opacity: 1; } 44% { opacity: 0.35; } 60%, 100% { opacity: 1; } }
+@keyframes film-bulb-pulse { 0%, 100% { opacity: 0.8; transform: scale(0.96); } 50% { opacity: 1; transform: scale(1.07); } }
+@keyframes film-bulb-stroke { from { stroke: currentColor; } to { stroke: #ffeeb8; } }
+@keyframes film-halo { 0%, 100% { opacity: 0.55; transform: scale(0.94); } 50% { opacity: 1; transform: scale(1.06); } }
+@keyframes film-tendril { 0% { stroke-dashoffset: 0.3; opacity: 0; } 10% { opacity: 1; } 85% { opacity: 1; } 100% { stroke-dashoffset: -1; opacity: 0; } }
+@keyframes film-spark { 0%, 60% { opacity: 0; transform: scale(0.4); } 82% { opacity: 1; transform: scale(1.6); } 100% { opacity: 0; transform: scale(0.6); } }
+@keyframes film-trace-run { 0% { offset-distance: 0%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+@keyframes film-sway { 0%, 100% { transform: rotate(-3.5deg); } 50% { transform: rotate(3.5deg); } }
+@keyframes film-twinkle { 0%, 100% { opacity: 0; transform: scale(0.3); } 50% { opacity: 1; transform: scale(1); } }
 
 @media (prefers-reduced-motion: reduce) {
+  .film-art,
+  .engineering-film .film-grid {
+    animation: none;
+  }
+  .film-art::before {
+    display: none;
+  }
   .film-art * {
     animation: none !important;
     stroke-dashoffset: 0 !important;
@@ -170,8 +349,16 @@
   .film-art .bar-grow {
     transform: scaleX(1);
   }
+  .film-art .tendril {
+    stroke-dasharray: none;
+    opacity: 0.8;
+  }
+  .film-art .spark-tip {
+    opacity: 0.8;
+  }
   .film-art .scope-scan,
-  .film-art .travelling-dot {
-    display: none;
+  .film-art .travelling-dot,
+  .film-art .pulse-dot {
+    display: none !important;
   }
 }
