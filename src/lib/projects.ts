@@ -78,11 +78,11 @@ export const PROJECTS: Project[] = [
         alt: "Smart wearable and stimulation system",
       },
       {
-        src: "/audio-stimulator/mp-2.jpg",
+        src: "/audio-stimulator/mp-2.png",
         alt: "Smart wearable and stimulation system",
       },
       {
-        src: "/audio-stimulator/mp-3.jpg",
+        src: "/audio-stimulator/mp-3.png",
         alt: "Smart wearable and stimulation system",
       },
     ],
@@ -135,7 +135,7 @@ export const PROJECTS: Project[] = [
         alt: "Mobile ANPR system",
       },
       {
-        src: "/mobile-anpr/ma-2.jpg",
+        src: "/mobile-anpr/ma-2.png",
         alt: "Mobile ANPR system",
       },
     ],
