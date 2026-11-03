@@ -170,12 +170,12 @@ export const PROJECTS: Project[] = [
       "An AI-powered system intended to turn camera views of exhibition-style environments into insight about visitor movement and engagement.",
     tags: ["Computer vision", "Edge AI", "Analytics"],
     image: {
-      src: "/crowd-analytics/ca-1.jpg",
+      src: "/crowd-analytics/ca-1.png",
       alt: "AI crowd analytics system",
     },
     slides: [
       {
-        src: "/crowd-analytics/ca-1.jpg",
+        src: "/crowd-analytics/ca-1.png",
         alt: "AI crowd analytics system",
       },
       {
@@ -217,12 +217,16 @@ export const PROJECTS: Project[] = [
       "An embedded speech-translation device designed to translate spoken language locally, without depending on cloud connectivity.",
     tags: ["NVIDIA Jetson", "Speech translation", "On-device"],
     image: {
-      src: "/rtta/rtta-1.jpg",
+      src: "/rtta/rtta-1.png",
       alt: "RTTA offline real-time translator",
     },
     slides: [
       {
-        src: "/rtta/rtta-1.jpg",
+        src: "/rtta/rtta-1.png",
+        alt: "RTTA offline real-time translator",
+      },
+      {
+        src: "/rtta/rtta-2.jpg",
         alt: "RTTA offline real-time translator",
       },
     ],
@@ -260,16 +264,16 @@ export const PROJECTS: Project[] = [
       "An enterprise AI and retrieval-augmented generation platform designed around governance, controlled access, and traceability.",
     tags: ["Enterprise AI", "RAG", "Governance"],
     image: {
-      src: "/cradle-ai/cai-4.jpg",
+      src: "/cradle-ai/cai-1.png",
       alt: "Cradle AI platform",
     },
     slides: [
       {
-        src: "/cradle-ai/cai-1.jpg",
+        src: "/cradle-ai/cai-1.png",
         alt: "Cradle AI platform",
       },
       {
-        src: "/cradle-ai/cai-2.jpg",
+        src: "/cradle-ai/cai-5.jpg",
         alt: "Cradle AI platform",
       },
       {
@@ -281,7 +285,11 @@ export const PROJECTS: Project[] = [
         alt: "Cradle AI platform",
       },
       {
-        src: "/cradle-ai/cai-5.jpg",
+        src: "/cradle-ai/cai-2.jpg",
+        alt: "Cradle AI platform",
+      },
+      {
+        src: "/cradle-ai/cai-6.jpg",
         alt: "Cradle AI platform",
       },
     ],
@@ -326,6 +334,10 @@ export const PROJECTS: Project[] = [
         src: "/talkshift/ts-1.png",
         alt: "TalkShift keyboard app",
       },
+      {
+        src: "/talkshift/ts-1.png",
+        alt: "TalkShift keyboard app",
+      },
     ],
     detail: {
       overview: [
@@ -348,12 +360,12 @@ export const PROJECTS: Project[] = [
       "A Python optimisation system that plans Fantasy Premier League transfers, chips, and lineups across multiple gameweeks.",
     tags: ["Python", "Google OR-Tools", "CP-SAT"],
     image: {
-      src: "/fpl/fpl-1.jpg",
+      src: "/fpl/fpl-1.png",
       alt: "FPL transfer optimisation system",
     },
     slides: [
       {
-        src: "/fpl/fpl-1.jpg",
+        src: "/fpl/fpl-1.png",
         alt: "FPL transfer optimisation system",
       },
       {
@@ -370,6 +382,10 @@ export const PROJECTS: Project[] = [
       },
       {
         src: "/fpl/fpl-5.jpg",
+        alt: "FPL transfer optimisation system",
+      },
+      {
+        src: "/fpl/fpl-6.jpg",
         alt: "FPL transfer optimisation system",
       },
     ],
@@ -415,6 +431,10 @@ export const PROJECTS: Project[] = [
     slides: [
       {
         src: "/rtai-vision/rtai-1.png",
+        alt: "Real-time AI vision system",
+      },
+      {
+        src: "/rtai-vision/rtai-2.png",
         alt: "Real-time AI vision system",
       },
     ],

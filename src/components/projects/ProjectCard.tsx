@@ -46,7 +46,7 @@ export default function ProjectCard({
         </Button>
       </div>
 
-      <div className="relative order-first aspect-[1672/941] overflow-hidden rounded-md border bg-hero lg:order-last">
+      <div className="relative order-first aspect-[1650/954] overflow-hidden rounded-md border bg-hero lg:order-last">
         {image && hasRealImage(image.src) ? (
           <Image
             src={image.src}
