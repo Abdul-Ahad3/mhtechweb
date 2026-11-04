@@ -15,4 +15,5 @@ export const PARTNER_LOGOS: PartnerLogo[] = [
   { name: "Seren Sync", src: "/companies/seren-sync.png" },
   { name: "Swish Hoop", src: "/companies/swish-hoop.png" },
   { name: "TalkShift", src: "/companies/talk-shift.png" },
+  { name: "Highon", src: "/companies/highon.png" },
 ];
