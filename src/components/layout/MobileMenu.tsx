@@ -36,7 +36,7 @@ export default function MobileMenu() {
         aria-controls="mobile-menu"
         aria-label="Main menu"
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-md border text-navy hover:bg-tag"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border text-navy hover:bg-tag"
       >
         <svg
           width="20"
@@ -59,9 +59,9 @@ export default function MobileMenu() {
       {open && (
         <div
           id="mobile-menu"
-          className="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-b bg-background shadow-sm"
+          className="absolute inset-x-0 top-full mt-2 max-h-[calc(100dvh-5rem)] overflow-y-auto rounded-3xl border border-border/60 bg-background/95 shadow-[0_16px_40px_-16px_rgba(17,43,59,0.35)] dark:shadow-[0_16px_40px_-16px_rgba(0,0,0,0.7)]"
         >
-          <Container className="py-6">
+          <Container className="py-4">
             <nav aria-label="Mobile">
               <ul className="divide-y">
                 {NAV_LINKS.map(({ label, href }) => {
