@@ -1,5 +1,5 @@
 import Container from "@/components/ui/Container";
-import ProjectCard from "@/components/projects/ProjectCard";
+import ShowcaseList from "@/components/ui/ShowList";
 import { PROJECTS } from "@/lib/projects";
 import type { ProjectCategory } from "@/types";
 
@@ -19,15 +19,13 @@ export default function CategorySection({
     >
       <Container>
         <h2>{category.title}</h2>
-        <ul className="mt-10 grid gap-6">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.slug}
-              project={project}
-              categoryTitle={category.title}
-            />
-          ))}
-        </ul>
+        <ShowcaseList
+          items={projects}
+          basePath="/projects"
+          eyebrow={category.title}
+          ctaLabel="View project"
+          className="mt-10"
+        />
       </Container>
     </section>
   );

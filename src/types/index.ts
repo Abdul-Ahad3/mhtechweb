@@ -1,4 +1,9 @@
-export type ProjectCategoryId = "automotive" | "biomedical" | "edge-ai" | "embedded" | "app-dev";
+export type ProjectCategoryId =
+  | "automotive"
+  | "biomedical"
+  | "edge-ai"
+  | "embedded"
+  | "app-dev";
 
 export type ProjectCategory = {
   id: ProjectCategoryId;
@@ -10,7 +15,7 @@ export type ProjectSlide = {
   alt: string;
 };
 
-export type ProjectDetail = {
+export type ShowcaseDetail = {
   overview: string[];
   approach?: string[];
   capabilities: string[];
@@ -18,17 +23,22 @@ export type ProjectDetail = {
   status?: string;
 };
 
-export type Project = {
+export type ProjectDetail = ShowcaseDetail;
+
+export type ShowcaseItem = {
   slug: string;
   name: string;
-  category: ProjectCategoryId;
   description: string;
   summary?: string;
   tags: string[];
   image?: { src: string; alt: string };
   slides: ProjectSlide[];
-  detail?: ProjectDetail;
+  detail?: ShowcaseDetail;
 };
+
+export type Project = ShowcaseItem & { category: ProjectCategoryId };
+
+export type Product = ShowcaseItem;
 
 export type ServiceCapability = {
   title: string;
