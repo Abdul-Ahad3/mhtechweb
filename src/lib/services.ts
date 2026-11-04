@@ -3,234 +3,149 @@ import type { Service } from "@/types";
 export const SERVICES: Service[] = [
   {
     id: "hardware",
-    title: "Hardware & PCB Development",
+    title: "Hardware & PCB Design",
     summary:
-      "Custom electronics and circuit board design, developed alongside firmware and software so the whole device works together.",
-    capabilities: [
-      {
-        title: "Custom hardware",
-        description:
-          "Hardware solutions for connected devices, paired with firmware for reliable connectivity.",
-      },
-      {
-        title: "PCB design",
-        description: "Circuit board design for connected devices.",
-      },
-      {
-        title: "Hardware and software integration",
-        description:
-          "Hardware, firmware, and software developed to work together.",
-      },
+      "We design and develop custom electronic hardware, from initial circuit concepts to fully functional prototypes. Services include schematic design, multilayer PCB layout, component selection, hardware integration, and testing.",
+    short:
+      "Custom electronic hardware, from circuit concepts to working prototypes.",
+    technologies: [
+      "Schematic Design",
+      "PCB Layout",
+      "Multilayer PCB",
+      "Component Selection",
+      "Hardware Prototyping",
+      "Circuit Testing",
+      "Hardware Validation",
+    ],
+  },
+  {
+    id: "firmware",
+    title: "Embedded Firmware & RTOS",
+    summary:
+      "We develop reliable embedded firmware for microcontroller-based products, including real-time applications, hardware drivers, communication interfaces, and low-power systems.",
+    short:
+      "Reliable firmware for microcontroller-based products, from drivers to real-time applications.",
+    technologies: [
+      "STM32",
+      "ESP32",
+      "nRF",
+      "FreeRTOS",
+      "Zephyr",
+      "Bare-Metal",
+      "C/C++",
+      "Device Drivers",
+      "Communication Protocols",
+    ],
+  },
+  {
+    id: "linux",
+    title: "Embedded Linux & BSP Development",
+    summary:
+      "We develop Linux-based embedded systems using ARM processors and System-on-Chip platforms. Services include custom Linux distributions, Board Support Packages (BSP), kernel configuration, device drivers, and hardware bring-up.",
+    short:
+      "Linux-based embedded systems on ARM processors and SoC platforms, including BSP development.",
+    technologies: [
+      "Embedded Linux",
+      "Yocto",
+      "Buildroot",
+      "Linux Kernel",
+      "BSP Development",
+      "Device Drivers",
+      "Rockchip",
+      "NXP i.MX",
+      "ARM SoCs",
+    ],
+  },
+  {
+    id: "automation",
+    title: "Industrial Automation & Control Systems",
+    summary:
+      "We develop industrial automation solutions using PLCs, HMI interfaces, SCADA systems, and industrial communication protocols to improve machine control, monitoring, and manufacturing efficiency.",
+    short:
+      "PLC, HMI, and SCADA solutions that improve machine control and monitoring.",
+    technologies: [
+      "PLC Programming",
+      "HMI Development",
+      "SCADA",
+      "Siemens PLC",
+      "Modbus",
+      "OPC UA",
+      "Industrial Communication",
+      "Machine Control",
     ],
   },
   {
     id: "iot",
-    title: "IoT & Embedded Systems",
+    title: "IoT & Connected Systems",
     summary:
-      "Connected devices that link the physical world to digital systems, from hardware and firmware to cloud integration.",
-    capabilities: [
-      {
-        title: "Hardware and firmware",
-        description:
-          "Custom hardware and firmware that enable seamless device connectivity.",
-      },
-      {
-        title: "Cloud integration and analytics",
-        description:
-          "Cloud infrastructure and data analytics that turn device data into insight.",
-      },
-      {
-        title: "Industrial IoT",
-        description:
-          "Connected systems with real-time monitoring, predictive maintenance, and operational analytics.",
-      },
-      {
-        title: "Smart home systems",
-        description:
-          "Home automation focused on comfort, security, and energy efficiency.",
-      },
-      {
-        title: "Healthcare IoT",
-        description:
-          "Remote patient monitoring, medical device integration, and healthcare management systems.",
-      },
-      {
-        title: "Smart city solutions",
-        description:
-          "Infrastructure systems for lighting, traffic, waste management, and public safety.",
-      },
-    ],
+      "We build intelligent IoT solutions that connect sensors, electronic devices, and industrial equipment through secure wireless and wired networks, enabling remote monitoring, data collection, and cloud connectivity.",
+    short:
+      "Connected sensors, devices, and equipment with remote monitoring and cloud connectivity.",
     technologies: [
-      "Arduino",
-      "Raspberry Pi",
-      "ESP32/ESP8266",
-      "MQTT",
-      "Zigbee",
+      "Internet of Things",
+      "Industrial IoT",
+      "BLE",
+      "Wi-Fi",
       "LoRaWAN",
-      "Node-RED",
-      "AWS IoT",
-      "Azure IoT Hub",
-      "TensorFlow Lite",
+      "MQTT",
+      "IoT Gateways",
+      "Remote Monitoring",
+      "OTA Updates",
+    ],
+  },
+  {
+    id: "cloud",
+    title: "Cloud & DevOps Automation",
+    summary:
+      "We streamline software and firmware development through automated CI/CD pipelines, cloud infrastructure, build systems, testing workflows, and reliable deployment processes.",
+    short:
+      "Automated CI/CD pipelines, build systems, and deployment for software and firmware.",
+    technologies: [
+      "Azure DevOps",
+      "GitHub Actions",
+      "Jenkins",
+      "Docker",
+      "CI/CD Pipelines",
+      "Build Automation",
+      "Automated Testing",
+      "Cloud Deployment",
+      "Release Engineering",
     ],
   },
   {
     id: "ai",
-    title: "AI & Computer Vision",
+    title: "AI, Edge AI & Computer Vision",
     summary:
-      "AI solutions that find patterns in your data and understand images and video.",
-    capabilities: [
-      {
-        title: "Computer vision",
-        description:
-          "Image and video analysis for object detection, quality control, and more.",
-      },
-      {
-        title: "Machine learning solutions",
-        description:
-          "Custom models that learn from your data to automate decisions and detect patterns.",
-      },
-      {
-        title: "Predictive analytics",
-        description:
-          "Forecasting models that help you anticipate trends, behavior, and opportunities.",
-      },
-      {
-        title: "Natural language processing",
-        description:
-          "Text analysis, sentiment analysis, and chatbots for better customer interactions.",
-      },
-    ],
+      "We develop intelligent AI solutions, including computer vision, edge AI, machine learning integration, and on-device inference for industrial, commercial, and embedded applications.",
+    short:
+      "Computer vision, edge AI, and on-device inference for industrial and embedded applications.",
     technologies: [
-      "TensorFlow",
-      "PyTorch",
-      "Scikit-learn",
-      "NLTK",
+      "Artificial Intelligence",
+      "Edge AI",
+      "Computer Vision",
+      "Object Detection",
+      "LLM Integration",
+      "ONNX",
+      "TensorFlow Lite",
       "OpenCV",
-      "Keras",
-      "Pandas",
-      "CUDA",
-      "AWS SageMaker",
-      "Azure ML",
+      "Embedded Machine Learning",
     ],
   },
   {
     id: "web",
-    title: "Web Development",
+    title: "Web & Mobile Application Development",
     summary:
-      "Responsive websites and web applications built with modern frameworks, designed to work well on every device.",
-    capabilities: [
-      {
-        title: "Responsive websites",
-        description:
-          "Custom websites that adapt to all screen sizes and devices.",
-      },
-      {
-        title: "Web applications",
-        description:
-          "Feature-rich applications that deliver desktop-like functionality through the browser.",
-      },
-      {
-        title: "E-commerce solutions",
-        description:
-          "Online stores with secure payment processing, inventory management, and customer engagement features.",
-      },
-      {
-        title: "Progressive web apps",
-        description:
-          "Solutions that combine the best of web and mobile apps, including offline capabilities.",
-      },
-    ],
+      "We design and develop modern web platforms, mobile applications, interactive dashboards, backend systems, and connected-device interfaces tailored to business and engineering requirements.",
+    short:
+      "Web platforms, mobile apps, dashboards, and backend systems for business and engineering needs.",
     technologies: [
-      "React",
-      "Angular",
-      "Vue.js",
-      "Node.js",
-      "Next.js",
-      "TypeScript",
-      "GraphQL",
-      "MongoDB",
-      "PostgreSQL",
-      "AWS/Azure",
-    ],
-  },
-  {
-    id: "mobile",
-    title: "Mobile App Development",
-    summary:
-      "Native mobile apps and companion apps, designed for performance and a smooth user experience.",
-    capabilities: [
-      {
-        title: "Native iPhone and iPad apps",
-        description:
-          "Custom applications built with Swift and SwiftUI for performance and user experience.",
-      },
-      {
-        title: "Apple Watch companion apps",
-        description:
-          "Focused, convenient apps that extend your product to the wrist.",
-      },
-      {
-        title: "App Store submission",
-        description:
-          "Support through the App Store submission process and its guidelines.",
-      },
-      {
-        title: "Maintenance and updates",
-        description:
-          "Ongoing support, performance optimization, and updates for new iOS features.",
-      },
-    ],
-    technologies: [
-      "Swift",
-      "SwiftUI",
-      "UIKit",
-      "Core Data",
-      "ARKit",
-      "Core ML",
-      "WidgetKit",
-      "CloudKit",
-      "Push Notifications",
-      "In-App Purchases",
-    ],
-  },
-  {
-    id: "game",
-    title: "Game Development",
-    summary:
-      "Cross-platform games and interactive experiences, from first concept to tested, polished gameplay.",
-    capabilities: [
-      {
-        title: "Mobile games",
-        description:
-          "Games for iOS and Android with intuitive controls and optimized performance.",
-      },
-      {
-        title: "PC and console games",
-        description:
-          "Immersive experiences for PC and major console platforms.",
-      },
-      {
-        title: "AR/VR experiences",
-        description:
-          "Augmented and virtual reality games and interactive experiences.",
-      },
-      {
-        title: "Multiplayer and social games",
-        description:
-          "Multiplayer frameworks with real-time interaction, leaderboards, and social features.",
-      },
-    ],
-    technologies: [
-      "Unity",
-      "Unreal Engine",
-      "C#",
-      "C++",
-      "ARKit",
-      "ARCore",
-      "PlayFab",
-      "Photon",
-      "WebGL",
-      "Blender",
+      "Web Applications",
+      "Mobile Applications",
+      "Backend APIs",
+      "Admin Dashboards",
+      "Cloud Integration",
+      "Database Systems",
+      "Device Companion Apps",
     ],
   },
 ];

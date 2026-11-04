@@ -1,30 +1,9 @@
+import Link from "next/link";
+import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHead";
 import Tag from "@/components/ui/Tag";
-
-const CAPABILITIES = [
-  {
-    title: "Hardware & Embedded Systems",
-    description: "Electronics and firmware developed together as one system.",
-    tags: ["PCB design", "Electronics", "Embedded firmware"],
-  },
-  {
-    title: "Connectivity & IoT",
-    description:
-      "Devices that communicate with phones, gateways, and the cloud.",
-    tags: ["BLE", "Wireless connectivity", "Connected devices"],
-  },
-  {
-    title: "AI & Computer Vision",
-    description: "Intelligence built to run close to where data is captured.",
-    tags: ["Edge AI", "Visual inspection", "Intelligent automation"],
-  },
-  {
-    title: "Product Design & Software",
-    description: "Enclosures and applications that make the hardware usable.",
-    tags: ["CAD & enclosures", "Mobile & web apps", "Cloud integration"],
-  },
-] as const;
+import { SERVICES } from "@/lib/services";
 
 export default function Capabilities() {
   return (
@@ -37,9 +16,9 @@ export default function Capabilities() {
         />
 
         <ul className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {CAPABILITIES.map(({ title, description, tags }, i) => (
+          {SERVICES.map(({ id, title, short, technologies }, i) => (
             <li
-              key={title}
+              key={id}
               className="flex flex-col rounded-lg border bg-white p-8 transition-colors hover:border-steel"
             >
               <span
@@ -48,18 +27,25 @@ export default function Capabilities() {
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-6">{title}</h3>
-              <p className="mt-3 text-muted">{description}</p>
-              <ul className="mt-auto flex flex-wrap gap-2 pt-6">
-                {tags.map((tag) => (
-                  <li key={tag}>
-                    <Tag>{tag}</Tag>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="mt-6">
+                <Link
+                  href={`/services#${id}`}
+                  className="hover:text-steel-dark"
+                >
+                  {title}
+                </Link>
+              </h3>
+              <p className="mt-3 text-muted">{short}</p>
+              
             </li>
           ))}
         </ul>
+
+        <div className="mt-12">
+          <Button href="/services" variant="secondary">
+            Explore Our Services
+          </Button>
+        </div>
       </Container>
     </section>
   );

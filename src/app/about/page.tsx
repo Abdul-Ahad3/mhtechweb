@@ -10,7 +10,7 @@ import { SERVICES } from "@/lib/services";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "MHTechFusion is a technology company working across hardware, firmware, software, and AI.",
+    "MHTechFusion is a technology company working across hardware, embedded software, industrial automation, cloud, and AI.",
 };
 
 export default function AboutPage() {
@@ -25,7 +25,7 @@ export default function AboutPage() {
             as="h1"
             eyebrow="About"
             title="About MHTechFusion."
-            description="MHTechFusion is a technology company that blends innovation with engineering expertise. Our team works across hardware, firmware, software, and AI to turn ideas into working products."
+            description="MHTechFusion is a technology company that blends innovation with engineering expertise. Our team works across hardware, embedded software, industrial automation, cloud, and AI to turn ideas into working products."
           />
           <p className="mt-5 max-w-3xl text-lg text-muted">
             We take on projects from circuit boards and embedded devices to
@@ -39,12 +39,12 @@ export default function AboutPage() {
         <Container>
           <SectionHeading
             eyebrow="What we do"
-            title="Six areas of expertise."
+            title="Eight areas of expertise."
             description="From the electronics inside a device to the software people use, here is where we work."
           />
 
-          <ul className="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map(({ id, title, summary }) => (
+          <ul className="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2 xl:grid-cols-4">
+            {SERVICES.map(({ id, title, short }) => (
               <li key={id} className="border-t pt-5">
                 <h3 className="text-lg">
                   <Link
@@ -54,7 +54,7 @@ export default function AboutPage() {
                     {title}
                   </Link>
                 </h3>
-                <p className="mt-2 text-muted">{summary}</p>
+                <p className="mt-2 text-muted">{short}</p>
               </li>
             ))}
           </ul>
@@ -91,10 +91,7 @@ export default function AboutPage() {
             )}
           </div>
 
-          <SectionHeading
-            eyebrow="Company identity"
-            title={COMPANY_TAGLINE}
-          />
+          <SectionHeading eyebrow="Company identity" title={COMPANY_TAGLINE} />
         </Container>
       </section>
 

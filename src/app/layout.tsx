@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | MHTechFusion",
   },
   description:
-    "MHTechFusion designs and builds connected products across embedded systems, PCB and hardware design, firmware, IoT, AI, and software.",
+    "MHTechFusion provides hardware and PCB design, embedded firmware and Linux, industrial automation, IoT, cloud and DevOps, AI and computer vision, and web and mobile development.",
     icons: {
       icon: [{ url: '/logo.png', type: 'image/png' }],
       apple: '/logo.png'

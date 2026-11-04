@@ -10,7 +10,7 @@ import { SERVICES } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "MHTechFusion services: web, mobile, and game development, IoT and embedded systems, AI and computer vision, and hardware and PCB development.",
+    "MHTechFusion services: hardware and PCB design, embedded firmware and Linux, industrial automation, IoT, cloud and DevOps, AI and computer vision, and web and mobile development.",
 };
 
 export default function ServicesPage() {
@@ -22,7 +22,7 @@ export default function ServicesPage() {
             as="h1"
             eyebrow="Services"
             title="Engineering services from circuits to cloud."
-            description="Six areas of expertise covering the hardware, firmware, software, and intelligence behind connected products."
+            description="Eight areas of expertise, from electronics and embedded firmware to industrial automation, cloud, and AI."
           />
           <nav aria-label="Services on this page" className="mt-8">
             <ul className="flex flex-wrap gap-x-8 gap-y-1">

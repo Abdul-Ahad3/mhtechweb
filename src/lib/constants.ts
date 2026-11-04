@@ -1,7 +1,7 @@
 export const SITE = {
   name: "MHTechFusion",
   description:
-    "Embedded systems, PCB and hardware design, firmware, IoT, AI, and software for connected products.",
+    "Hardware, embedded firmware, industrial automation, IoT, cloud, AI, and software for connected products.",
 } as const;
 
 export const NAV_LINKS = [

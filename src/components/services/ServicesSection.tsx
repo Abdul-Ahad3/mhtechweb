@@ -10,7 +10,7 @@ export default function ServiceSection({
   service: Service;
   index: number;
 }) {
-  const { id, title, summary, capabilities, technologies } = service;
+  const { id, title, summary, technologies } = service;
 
   return (
     <section
@@ -25,30 +25,17 @@ export default function ServiceSection({
           description={summary}
         />
 
-        <div>
-          <ul className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
-            {capabilities.map(({ title, description }) => (
-              <li key={title} className="border-t pt-5">
-                <h3 className="text-lg">{title}</h3>
-                <p className="mt-2 text-muted">{description}</p>
+        <div className="border-t pt-5 lg:self-start">
+          <p className="text-sm font-medium text-muted">
+            Key services &amp; technologies
+          </p>
+          <ul className="mt-4 flex flex-wrap gap-2.5">
+            {technologies.map((tech) => (
+              <li key={tech}>
+                <Tag className="px-3 py-1.5 text-sm">{tech}</Tag>
               </li>
             ))}
           </ul>
-
-          {technologies && technologies.length > 0 && (
-            <div className="mt-10">
-              <p className="text-sm font-medium text-muted">
-                Tools and technologies
-              </p>
-              <ul className="mt-3 flex flex-wrap gap-2">
-                {technologies.map((tech) => (
-                  <li key={tech}>
-                    <Tag>{tech}</Tag>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
         </div>
       </Container>
     </section>

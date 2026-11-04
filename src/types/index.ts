@@ -40,15 +40,10 @@ export type Project = ShowcaseItem & { category: ProjectCategoryId };
 
 export type Product = ShowcaseItem;
 
-export type ServiceCapability = {
-  title: string;
-  description: string;
-};
-
 export type Service = {
   id: string;
   title: string;
   summary: string;
-  capabilities: ServiceCapability[];
-  technologies?: string[];
+  short: string;
+  technologies: string[];
 };
