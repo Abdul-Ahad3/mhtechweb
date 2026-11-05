@@ -459,6 +459,52 @@ export const PROJECTS: Project[] = [
       ],
     },
   },
+  {
+    slug: "ev-can-dashboard",
+    name: "EV CAN Communication & Dashboard Integration",
+    category: "automotive",
+    description:
+      "An embedded automotive integration project establishing and debugging CAN communication between an electric vehicle's ECU and its dashboard display using a Teensy 4.0 controller.",
+    tags: ["CAN Bus", "Teensy 4.0", "EV ECU Integration"],
+    image: {
+      src: "/can-ev/ce-1.png",
+      alt: "Electric vehicle with its embedded CAN communication and dashboard integration system",
+    },
+    slides: [
+      {
+        src: "/can-ev/ce-1.png",
+        alt: "Electric vehicle used in the CAN communication integration project",
+      },
+    ],
+    detail: {
+      overview: [
+        "This project focuses on establishing and debugging communication between an electric vehicle's Electronic Control Unit (ECU) and its dashboard display through the Controller Area Network (CAN) protocol.",
+        "The integration enables vehicle information and operating parameters to be communicated to the display, providing a centralized interface for monitoring the electric vehicle.",
+      ],
+      approach: [
+        "A Teensy 4.0 microcontroller is used as part of the communication interface between the vehicle ECU and dashboard. The engineering work involves establishing the CAN communication, debugging message exchange, and ensuring that the relevant vehicle parameters can be received and presented on the display.",
+        "The dashboard visuals show vehicle information including speed, range, battery state of charge, voltage, current, temperature-related readings, gear, throttle, and torque-request parameters.",
+      ],
+      capabilities: [
+        "CAN communication between the electric vehicle ECU and dashboard",
+        "Embedded communication interface using a Teensy 4.0 controller",
+        "CAN message debugging and integration",
+        "Display of vehicle operating information",
+        "Battery-related parameter visualization",
+        "Vehicle status and driving information displayed through the dashboard interface",
+      ],
+      technologies: [
+        "Teensy 4.0",
+        "CAN Bus",
+        "Embedded C/C++",
+        "Electronic Control Unit (ECU)",
+        "Microcontroller Integration",
+        "Automotive Dashboard Interface",
+      ],
+      status:
+        "The project involves establishing and debugging CAN communication between the electric vehicle ECU and its dashboard display.",
+    },
+  },
 ];
 
 export const getProject = (slug: string) =>

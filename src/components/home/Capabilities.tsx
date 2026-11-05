@@ -2,7 +2,6 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHead";
-import Tag from "@/components/ui/Tag";
 import { SERVICES } from "@/lib/services";
 
 export default function Capabilities() {
@@ -16,7 +15,7 @@ export default function Capabilities() {
         />
 
         <ul className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {SERVICES.map(({ id, title, short, technologies }, i) => (
+          {SERVICES.map(({ id, title, short }, i) => (
             <li
               key={id}
               className="flex flex-col rounded-lg border bg-white p-8 transition-colors hover:border-steel"
