@@ -179,7 +179,7 @@ export const PROJECTS: Project[] = [
         alt: "AI crowd analytics system",
       },
       {
-        src: "/crowd-analytics/ca-2.jpg",
+        src: "/crowd-analytics/ca-2.png",
         alt: "AI crowd analytics system",
       },
     ],
@@ -226,7 +226,15 @@ export const PROJECTS: Project[] = [
         alt: "RTTA offline real-time translator",
       },
       {
-        src: "/rtta/rtta-2.jpg",
+        src: "/rtta/rtta-2.png",
+        alt: "RTTA offline real-time translator",
+      },
+      {
+        src: "/rtta/rtta-3.png",
+        alt: "RTTA offline real-time translator",
+      },
+      {
+        src: "/rtta/rtta-4.png",
         alt: "RTTA offline real-time translator",
       },
     ],
@@ -369,7 +377,7 @@ export const PROJECTS: Project[] = [
         alt: "FPL transfer optimisation system",
       },
       {
-        src: "/fpl/fpl-2.jpg",
+        src: "/fpl/fpl-2.png",
         alt: "FPL transfer optimisation system",
       },
       {
@@ -381,7 +389,7 @@ export const PROJECTS: Project[] = [
         alt: "FPL transfer optimisation system",
       },
       {
-        src: "/fpl/fpl-5.jpg",
+        src: "/fpl/fpl-5.png",
         alt: "FPL transfer optimisation system",
       },
       {

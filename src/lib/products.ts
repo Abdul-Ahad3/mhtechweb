@@ -17,7 +17,15 @@ export const PRODUCTS: Product[] = [
         alt: "RTTA offline and calling real-time translator",
       },
       {
-        src: "/rtta/rtta-2.jpg",
+        src: "/rtta/rtta-2.png",
+        alt: "RTTA offline and calling real-time translator",
+      },
+      {
+        src: "/rtta/rtta-3.png",
+        alt: "RTTA offline and calling real-time translator",
+      },
+      {
+        src: "/rtta/rtta-4.png",
         alt: "RTTA offline and calling real-time translator",
       },
     ],
