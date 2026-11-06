@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <div className="h-16 bg-hero lg:h-(--header-height)">
       <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 py-2 sm:px-4 lg:px-6 lg:py-3">
-        <div className="pointer-events-auto relative mx-auto flex h-12 max-w-6xl items-center justify-between rounded-full border border-border/60 bg-background/70 px-4 shadow-[0_8px_30px_-12px_rgba(17,43,59,0.3)] backdrop-blur-xl backdrop-saturate-150 lg:h-16 lg:px-6 dark:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.6)]">
+        <div className="pointer-events-auto relative mx-auto flex h-12 max-w-6xl items-center justify-between rounded-full border border-navy/10 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.8),rgba(255,255,255,0.5))] px-4 shadow-[0_10px_36px_-10px_rgba(17,43,59,0.3),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-2xl backdrop-saturate-[1.8] lg:h-16 lg:px-6 dark:border-navy/20 dark:bg-[linear-gradient(to_bottom,rgba(255,255,255,0.14),rgba(255,255,255,0.05))] dark:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.7),inset_0_1px_0_rgba(255,255,255,0.16)]">
           <Link
             href="/"
             className="flex items-center gap-3 font-heading text-xl font-bold tracking-tight text-navy"
@@ -37,8 +37,8 @@ export default function Navbar() {
                     aria-current={isActive(href) ? "page" : undefined}
                     className={`block rounded-full px-2.5 py-2 text-[15px] font-medium xl:px-3.5 ${
                       isActive(href)
-                        ? "bg-steel/10 text-steel-dark"
-                        : "text-navy hover:bg-tag hover:text-steel-dark"
+                        ? "bg-navy text-white"
+                        : "text-navy hover:bg-navy/10"
                     }`}
                   >
                     {label}
