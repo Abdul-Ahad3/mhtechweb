@@ -54,8 +54,8 @@ export default function ShowCard({
           <Image
             src={image.src}
             alt={image.alt || name}
-            width={1672}
-            height={941}
+            width={1650}
+            height={955}
             sizes="(min-width: 1024px) 560px, 100vw"
             className="h-full w-full object-cover"
           />

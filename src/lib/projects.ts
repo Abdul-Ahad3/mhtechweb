@@ -281,23 +281,19 @@ export const PROJECTS: Project[] = [
         alt: "Cradle AI platform",
       },
       {
-        src: "/cradle-ai/cai-5.jpg",
+        src: "/cradle-ai/cai-2.png",
         alt: "Cradle AI platform",
       },
       {
-        src: "/cradle-ai/cai-3.jpg",
+        src: "/cradle-ai/cai-3.png",
         alt: "Cradle AI platform",
       },
       {
-        src: "/cradle-ai/cai-4.jpg",
+        src: "/cradle-ai/cai-4.png",
         alt: "Cradle AI platform",
       },
       {
-        src: "/cradle-ai/cai-2.jpg",
-        alt: "Cradle AI platform",
-      },
-      {
-        src: "/cradle-ai/cai-6.jpg",
+        src: "/cradle-ai/cai-5.png",
         alt: "Cradle AI platform",
       },
     ],
@@ -343,7 +339,7 @@ export const PROJECTS: Project[] = [
         alt: "TalkShift keyboard app",
       },
       {
-        src: "/talkshift/ts-1.png",
+        src: "/talkshift/ts-2.png",
         alt: "TalkShift keyboard app",
       },
     ],
