@@ -377,11 +377,11 @@ export const PROJECTS: Project[] = [
         alt: "FPL transfer optimisation system",
       },
       {
-        src: "/fpl/fpl-3.jpg",
+        src: "/fpl/fpl-3.png",
         alt: "FPL transfer optimisation system",
       },
       {
-        src: "/fpl/fpl-4.jpg",
+        src: "/fpl/fpl-4.png",
         alt: "FPL transfer optimisation system",
       },
       {
@@ -389,7 +389,7 @@ export const PROJECTS: Project[] = [
         alt: "FPL transfer optimisation system",
       },
       {
-        src: "/fpl/fpl-6.jpg",
+        src: "/fpl/fpl-6.png",
         alt: "FPL transfer optimisation system",
       },
     ],
