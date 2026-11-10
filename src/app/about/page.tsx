@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const { email, phone } = COMPANY_CONTACT;
+  const { email, phone, address } = COMPANY_CONTACT;
   const { light, dark, alt, width, height } = COMPANY_LOGO;
 
   return (
@@ -103,7 +103,7 @@ export default function AboutPage() {
             description="Tell us about your product idea, requirements, or technical challenge."
           />
 
-          <dl className="mt-10 grid max-w-2xl gap-8 sm:grid-cols-2">
+          <dl className="mt-10 grid max-w-4xl gap-8 sm:grid-cols-3">
             <div className="border-t pt-5">
               <dt className="text-sm font-medium text-muted">Email</dt>
               <dd className="mt-2 text-lg font-medium">
@@ -123,6 +123,17 @@ export default function AboutPage() {
                   className="inline-flex min-h-11 items-center hover:text-steel-dark"
                 >
                   {phone}
+                </a>
+              </dd>
+            </div>
+            <div className="border-t pt-5">
+              <dt className="text-sm font-medium text-muted">Address</dt>
+              <dd className="mt-2 text-lg font-medium">
+                <a
+                  href={`mailto:${address}`}
+                  className="inline-flex min-h-11 items-center break-all hover:text-steel-dark"
+                >
+                  {address}
                 </a>
               </dd>
             </div>

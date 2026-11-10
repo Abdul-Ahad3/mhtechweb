@@ -1,13 +1,16 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/layout/Logo";
+import { COMPANY_CONTACT } from "@/lib/company";
 import { CONTACT_LINK, NAV_LINKS, SITE } from "@/lib/constants";
 
 export default function Footer() {
+  const { email, phone, address } = COMPANY_CONTACT;
+
   return (
     <footer className="surface-dark bg-navy text-white">
       <Container className="py-16">
-        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1.25fr]">
           <div>
             <div className="flex items-center gap-3">
               <Logo onDark className="h-9" />
@@ -35,12 +38,28 @@ export default function Footer() {
             <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-dark-muted">
               Get in touch
             </h2>
-            <p className="mt-4 text-dark-muted">
-              Tell us about your product or project.
-            </p>
+            <address className="mt-4 space-y-3 not-italic text-dark-muted">
+              <p>
+                <a
+                  href={`mailto:${email}`}
+                  className="inline-block break-all py-1 hover:text-light-blue"
+                >
+                  {email}
+                </a>
+              </p>
+              <p>
+                <a
+                  href={`tel:${phone.replace(/[^\d+]/g, "")}`}
+                  className="inline-block py-1 hover:text-light-blue"
+                >
+                  {phone}
+                </a>
+              </p>
+              <p className="whitespace-pre-line">{address}</p>
+            </address>
             <Link
               href={CONTACT_LINK.href}
-              className="mt-3 inline-block font-medium hover:text-light-blue"
+              className="mt-4 inline-block font-medium hover:text-light-blue"
             >
               Contact us
             </Link>
