@@ -25,9 +25,12 @@ export default function AboutPage() {
             as="h1"
             eyebrow="About"
             title="About MHTechFusion."
-            description="MHTechFusion is a Germany-based, husband-and-wife-led IoT, AI, and embedded systems startup specializing in end-to-end product development, from initial concept and R&D to prototyping, testing, and production-ready solutions."
+            description=""
           />
           <p className="mt-5 max-w-4xl text-lg text-muted whitespace-pre-line">
+            MHTechFusion is a Germany-based, husband-and-wife-led <b>IoT, AI, and embedded systems startup</b> specializing in end-to-end product development, from initial concept and R&D to prototyping, testing, and production-ready solutions.
+            <br />
+            <br />
             Our expertise spans <b>biomedical wearables, automotive electronics, embedded firmware, custom PCB and high-speed circuit design,</b> 
             <b>Edge AI, AI/ML, LLMs, RAG-based intelligent systems, industrial automation, robotics, and wireless communication technologies.</b>
             <br />
