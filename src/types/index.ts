@@ -3,7 +3,8 @@ export type ProjectCategoryId =
   | "biomedical"
   | "edge-ai"
   | "embedded"
-  | "app-dev";
+  | "app-dev"
+  | "indus-auto";
 
 export type ProjectCategory = {
   id: ProjectCategoryId;

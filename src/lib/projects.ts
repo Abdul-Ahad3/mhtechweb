@@ -6,6 +6,7 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
   { id: "edge-ai", title: "Edge AI and Computer Vision" },
   { id: "embedded", title: "Embedded Systems" },
   { id: "app-dev", title: "Software and App Development" },
+  { id: "indus-auto", title: "Industrial Automation" },
 ];
 
 export const hasRealImage = (src?: string) =>
@@ -507,6 +508,63 @@ export const PROJECTS: Project[] = [
       ],
       status:
         "The project involves establishing and debugging CAN communication between the electric vehicle ECU and its dashboard display.",
+    },
+  },
+  {
+    slug: "golf-training-system",
+    name: "Golf Training System",
+    category: "indus-auto",
+    description:
+      "A robotics-assisted golf training platform integrating HCFA PLC control, operator interfaces, and two independent motion systems for hydraulic resistance and controlled lead screw movement.",
+    tags: [
+      "Industrial Automation",
+      "HFCA PLC",
+      "Motion Control",
+      "Ladder Logic",
+    ],
+    image: {
+      src: "/golf-train/gts-1.png",
+      alt: "Golf Training System industrial automation and control",
+    },
+    slides: [
+      {
+        src: "/golf-train/gts-1.png",
+        alt: "Golf Training System overview showing HCFA PLC, ARC HMI, and motion hardware",
+      },
+    ],
+    detail: {
+      overview: [
+        "The Golf Training System combines industrial control hardware, a touchscreen operator interface, and electromechanical motion systems to support configurable golf training exercises. Its control architecture coordinates machine operation, motion commands, and adjustable resistance settings.",
+        "The engineering work involves an HCFA M511S PLC-based controller, servo-driven mechanisms, and an ARC operator interface. Further development focuses on adapting the existing motion-control system for hydraulic resistance and assistance using proportional valve and pump control.",
+      ],
+      approach: [
+        "The existing control architecture connects a PC-based operator interface to a Python Flask backend, which communicates with the HCFA controller through TCP sockets. The controller processes operating commands and coordinates the associated servo and motion-control hardware.",
+        "The operator interface supports training configuration, start and stop commands, operating modes, hand selection, and resistance settings for different phases of a golf swing. These commands form the basis for coordinating the training software with the industrial controller.",
+        "The hydraulic adaptation work examines how existing motion commands can be mapped to hydraulic pump, valve, and limit-switch control. The approach prioritizes reuse of the existing interface and communication architecture while evaluating controller I/O compatibility, actuator sequencing, and hardware requirements.",
+      ],
+      capabilities: [
+        "HCFA PLC-based machine control",
+        "Touchscreen operator interface for training configuration",
+        "Servo drive and motion-control integration",
+        "Lead screw positioning and electromechanical actuation",
+        "Configurable operating modes and resistance commands",
+        "Backswing and forward-swing resistance configuration",
+        "Controller diagnostics and operating-state monitoring",
+        "Hydraulic resistance and assistance integration planning",
+      ],
+      technologies: [
+        "HCFA M511S PLC",
+        "HCFA industrial I/O",
+        "PLC ladder logic",
+        "ARC HMI",
+        "Servo drives",
+        "Motion control",
+        "Position feedback and encoders",
+        "Hydraulic proportional valve control",
+        "Limit-switch integration",
+      ],
+      status:
+        "The existing PLC, operator interface, and motion-control architecture has been reviewed. The hydraulic conversion remains an adaptation and validation activity, with final controller compatibility and physical hydraulic operation requiring confirmation.",
     },
   },
 ];
