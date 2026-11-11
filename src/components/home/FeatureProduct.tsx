@@ -8,10 +8,10 @@ type FeaturedProject = Omit<Project, "slug" | "slides">;
 
 const PROJECTS: FeaturedProject[] = [
   {
-    name: "SmartPTI Truck Inspection System",
+    name: "Truck Inspection System",
     description:
       "A complete inspection platform connecting BLE tyre sensors with a custom embedded controller, display and purpose-built enclosure.",
-    summary: "Summary coming soon.",
+    summary: "Brings several vehicle-inspection checks into one dedicated device.",
     tags: ["Sensor-based inspection"],
     image: { src: "truck-inspection/ti-1.png", alt: "" },
     category: "automotive",
@@ -20,16 +20,16 @@ const PROJECTS: FeaturedProject[] = [
     name: "Audio Stimulator",
     description:
       "A coordinated engineering platform linking a sensor wristband, mobile application, app-controlled stimulator and cloud data services.",
-    summary: "Summary coming soon.",
+    summary: "Connects sensing, stimulation, and session records in one integrated system.",
     tags: ["Wearable Technology", "Mobile App"],
     image: { src: "audio-stimulator/mp-1.png", alt: "" },
     category: "biomedical",
   },
   {
-    name: "Mobile ANPR",
+    name: "Mobile ANPR System",
     description:
       "A vehicle-mounted vision system combining a camera, NVIDIA Jetson edge processing and a mobile interface for automatic number plate recognition.",
-    summary: "Summary coming soon.",
+    summary: "Reads number plates automatically, so vehicles can be identified without manual transcription.",
     tags: ["Edge AI", "Computer vision", "Mobile"],
     image: { src: "mobile-anpr/ma-1.png", alt: "" },
     category: "edge-ai",
@@ -102,29 +102,6 @@ export default function FeaturedProducts() {
                   </span>
                   {project.summary}
                 </p>
-
-                <details className="group mt-8 border-t pt-2">
-                  <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 font-medium text-navy [&::-webkit-details-marker]:hidden">
-                    Technical details
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.75"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                      className="shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none"
-                    >
-                      <path d="M3 6l5 5 5-5" />
-                    </svg>
-                  </summary>
-                  <p className="pb-2 pt-2 text-muted">
-                    Technical details coming soon.
-                  </p>
-                </details>
               </div>
             </li>
           ))}

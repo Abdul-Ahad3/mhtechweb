@@ -3,10 +3,10 @@ import type { Project, ProjectCategory } from "@/types";
 export const PROJECT_CATEGORIES: ProjectCategory[] = [
   { id: "automotive", title: "Automotive" },
   { id: "biomedical", title: "Biomedical" },
+  { id: "indus-auto", title: "Industrial Automation" },
   { id: "edge-ai", title: "Edge AI and Computer Vision" },
   { id: "embedded", title: "Embedded Systems" },
   { id: "app-dev", title: "Software and App Development" },
-  { id: "indus-auto", title: "Industrial Automation" },
 ];
 
 export const hasRealImage = (src?: string) =>
