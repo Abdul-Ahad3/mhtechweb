@@ -250,6 +250,7 @@ export default function ContactForm() {
             <option value="iot-embedded">Cloud &amp; DevOps Automation</option>
             <option value="ai-vision">AI, Edge AI &amp; Computer Vision</option>
             <option value="remote-debug">Remote Debugging</option>
+            <option value="3d-cad">3D CAD Designing</option>
             <option value="consult">Consultancy</option>
             <option value="web-development">Web &amp; Mobile Development</option>
             <option value="other">Other</option>
