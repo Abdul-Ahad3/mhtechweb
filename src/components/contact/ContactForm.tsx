@@ -242,14 +242,18 @@ export default function ContactForm() {
             className={`${fieldClassName} cursor-pointer`}
           >
             <option value="">Select project type...</option>
-            <option value="hardware-pcb">Hardware &amp; PCB Development</option>
-            <option value="iot-embedded">IoT &amp; Embedded Systems</option>
-            <option value="ai-vision">AI &amp; Computer Vision</option>
-            <option value="web-development">Web Development</option>
-            <option value="mobile-app">Mobile App Development</option>
-            <option value="game-development">Game Development</option>
+            <option value="hardware-pcb">Hardware &amp; PCB Design</option>
+            <option value="embedded-rtos">Embedded Firmware &amp; RTOS</option>
+            <option value="linux-bsp">Embedded Linux &amp; BSP Development</option>
+            <option value="auto-control">Industrial Automation &amp; Control Systems</option>
+            <option value="iot-connected">IoT &amp; Connected Systems</option>
+            <option value="iot-embedded">Cloud &amp; DevOps Automation</option>
+            <option value="ai-vision">AI, Edge AI &amp; Computer Vision</option>
+            <option value="remote-debug">Remote Debugging</option>
+            <option value="consult">Consultancy</option>
+            <option value="web-development">Web &amp; Mobile Development</option>
             <option value="other">Other</option>
-            <option value="other">None</option>
+            <option value="none">None</option>
           </select>
         </div>
 
