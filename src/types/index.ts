@@ -47,4 +47,5 @@ export type Service = {
   summary: string;
   short: string;
   technologies: string[];
+  cta: string;
 };

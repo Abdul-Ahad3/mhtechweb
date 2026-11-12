@@ -2,6 +2,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHead";
 import Tag from "@/components/ui/Tag";
 import type { Service } from "@/types";
+import Button from "../ui/Button";
 
 export default function ServiceSection({
   service,
@@ -10,7 +11,7 @@ export default function ServiceSection({
   service: Service;
   index: number;
 }) {
-  const { id, title, summary, technologies } = service;
+  const { id, title, summary, technologies, cta } = service;
 
   return (
     <section
@@ -36,6 +37,7 @@ export default function ServiceSection({
               </li>
             ))}
           </ul>
+          <Button>{cta}</Button>
         </div>
       </Container>
     </section>

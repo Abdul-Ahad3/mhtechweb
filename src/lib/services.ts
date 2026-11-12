@@ -17,6 +17,7 @@ export const SERVICES: Service[] = [
       "Circuit Testing",
       "Hardware Validation",
     ],
+    cta: "Let's Design Your Hardware and PCB Projects Together",
   },
   {
     id: "firmware",
@@ -36,6 +37,7 @@ export const SERVICES: Service[] = [
       "Device Drivers",
       "Communication Protocols",
     ],
+    cta: "Discuss Your Embedded Firmware Project",
   },
   {
     id: "linux",
@@ -55,6 +57,7 @@ export const SERVICES: Service[] = [
       "NXP i.MX",
       "ARM SoCs",
     ],
+    cta: "Discuss Your Embedded Linux Project",
   },
   {
     id: "automation",
@@ -73,6 +76,7 @@ export const SERVICES: Service[] = [
       "Industrial Communication",
       "Machine Control",
     ],
+    cta: "Discuss Your Automation Project",
   },
   {
     id: "iot",
@@ -92,6 +96,7 @@ export const SERVICES: Service[] = [
       "Remote Monitoring",
       "OTA Updates",
     ],
+    cta: "Connect your IoT Devices and Systems With Us",
   },
   {
     id: "cloud",
@@ -111,6 +116,7 @@ export const SERVICES: Service[] = [
       "Cloud Deployment",
       "Release Engineering",
     ],
+    cta: "Automate your DevOps and Cloud Workflows",
   },
   {
     id: "ai",
@@ -130,6 +136,64 @@ export const SERVICES: Service[] = [
       "OpenCV",
       "Embedded Machine Learning",
     ],
+    cta: "Discuss Your AI & Computer Vision Project",
+  },
+  {
+    id: "remote-debug",
+    title: "Remote Engineering Support & Debugging",
+    summary:
+      "Expert remote engineering assistance for industrial automation, control systems, embedded technologies, and complex engineering installations. We help diagnose faults, troubleshoot existing systems, support commissioning, and optimize equipment alongside on-site technical teams.",
+    short:
+      "Remote troubleshooting, debugging, commissioning, and technical assistance for industrial and embedded systems.",
+    technologies: [
+      "PLC & HMI Debugging",
+      "SCADA Systems",
+      "Control Panel Troubleshooting",
+      "System Commissioning",
+      "Embedded Hardware & Firmware",
+      "Industrial Communication",
+      "Fault Diagnosis",
+      "Remote Engineering Sessions",
+    ],
+    cta: "Schedule a Remote Support Session",
+  },
+  {
+    id: "cad",
+    title: "3D Enclosure & Mechanical Design",
+    summary:
+      "We design custom 3D enclosures and mechanical components for electronic devices, embedded systems, IoT products, and industrial applications. Our designs consider PCB integration, component placement, mounting, thermal management, assembly, and manufacturability.",
+    short:
+      "Custom 3D enclosures and mechanical designs for electronic, embedded, IoT, and industrial products.",
+    technologies: [
+      "Custom Electronic Enclosures",
+      "3D CAD Modeling",
+      "Mechanical Product Design",
+      "PCB & Component Integration",
+      "Industrial & IoT Housings",
+      "3D-Printing-Ready Designs",
+      "Design for Manufacturing",
+      "Design for Assembly",
+    ],
+    cta: "Discuss Your Design",
+  },
+  {
+    id: "consult",
+    title: "Engineering Consultancy & Technical Audits",
+    summary:
+      "We help companies, startups, and engineering teams evaluate existing systems, overcome technical challenges, and make informed development decisions through architecture reviews, design assessments, technical audits, feasibility studies, and performance optimization.",
+    short:
+      "Technical assessments, engineering audits, feasibility studies, and expert guidance for complex projects.",
+    technologies: [
+      "Technical Project Assessments",
+      "Hardware & PCB Reviews",
+      "Firmware Design Reviews",
+      "System Architecture Consulting",
+      "Technology Consulting",
+      "Product Feasibility Analysis",
+      "Risk Analysis",
+      "Performance & Reliability Optimization",
+    ],
+    cta: "Book an Engineering Consultation",
   },
   {
     id: "web",
@@ -147,5 +211,6 @@ export const SERVICES: Service[] = [
       "Database Systems",
       "Device Companion Apps",
     ],
+    cta: "Let's Make Your Web & Mobile Apps Together",
   },
 ];
