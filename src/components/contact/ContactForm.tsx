@@ -247,12 +247,15 @@ export default function ContactForm() {
             <option value="linux-bsp">Embedded Linux &amp; BSP Development</option>
             <option value="auto-control">Industrial Automation &amp; Control Systems</option>
             <option value="iot-connected">IoT &amp; Connected Systems</option>
-            <option value="iot-embedded">Cloud &amp; DevOps Automation</option>
+            <option value="cloud-devops">Cloud &amp; DevOps Automation</option>
             <option value="ai-vision">AI, Edge AI &amp; Computer Vision</option>
-            <option value="remote-debug">Remote Debugging</option>
-            <option value="3d-cad">3D CAD Designing</option>
-            <option value="consult">Consultancy</option>
-            <option value="web-development">Web &amp; Mobile Development</option>
+            <option value="remote-debug">Remote Engineering Support &amp; Debugging</option>
+            <option value="bio-wear">Biodemical Wearables</option>
+            <option value="automotive">Automotive Products</option>
+            <option value="iot-rnd">IoT Product R&amp;D</option>
+            <option value="3d-cad">3D Enclosure &amp; Mechanical Design</option>
+            <option value="consult">Engineering Consultancy &amp; Technical Audits</option>
+            <option value="web-mobile">Web &amp; Mobile Development</option>
             <option value="other">Other</option>
             <option value="none">None</option>
           </select>

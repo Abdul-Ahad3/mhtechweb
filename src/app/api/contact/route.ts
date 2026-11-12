@@ -2,13 +2,22 @@ import { Resend } from "resend";
 
 const MAX_BODY_BYTES = 16_384;
 const PROJECT_TYPES: Record<string, string> = {
-  "hardware-pcb": "Hardware & PCB Development",
-  "iot-embedded": "IoT & Embedded Systems",
-  "ai-vision": "AI & Computer Vision",
-  "web-development": "Web Development",
-  "mobile-app": "Mobile App Development",
-  "game-development": "Game Development",
-  other: "Other",
+  "hardware-pcb": "Hardware & PCB Design",
+  "embedded-rtos": "Embedded Firmware & RTOS",
+  "linux-bsp": "Embedded Linux & BSP Development",
+  "auto-control": "Industrial Automation & Control Systems",
+  "iot-connected": "IoT & Connected Systems",
+  "cloud-devops": "Cloud & DevOps Automation",
+  "ai-vision": "AI, Edge AI & Computer Vision",
+  "remote-debug": "Remote Engineering Support & Debugging",
+  "bio-wear": "Biodemical Wearables",
+  "automotive": "Automotive Products",
+  "iot-rnd": "IoT Product R&amp;D",
+  "3d-cad": "3D Enclosure & Mechanical Design",
+  "consult": "Engineering Consultancy & Technical Audits",
+  "web-mobile": "Web & Mobile Development",
+  "other": "Other",
+  "none": "None",
 };
 
 type ContactData = {
